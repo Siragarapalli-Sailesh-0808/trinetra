@@ -35,7 +35,7 @@ export const About = () => {
         <nav className="h-20 bg-white/95 backdrop-blur-sm shadow-sm">
           <div className="max-w-7xl mx-auto h-full px-6 flex items-center justify-between gap-6">
             <Link to="/" className="shrink-0">
-              <img src="/src/assets/img/logio/Logo.png" alt="Trinetra Academy Logo" className="h-14 w-auto object-contain" />
+              <img src="/logo.png" alt="Trinetra Academy Logo" className="h-14 w-auto object-contain" />
             </Link>
 
             <div className="hidden md:flex items-center gap-14">
@@ -226,7 +226,7 @@ export const About = () => {
         <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-start gap-12">
           <div className="max-w-sm">
             <div className="mb-4">
-              <img src="/src/assets/img/logio/Logo.png" alt="Trinetra Academy Logo" className="h-14 w-auto object-contain" />
+              <img src="/logo.png" alt="Trinetra Academy Logo" className="h-14 w-auto object-contain" />
             </div>
             <p className="font-['Inter'] text-sm leading-relaxed text-slate-500 dark:text-slate-400">
               Empowering the next generation of scholars with cutting-edge pedagogy and personalized mentorship.

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useWow } from "./lib/hooks/useWow";
-import { HomeTwo } from "./pages/home/HomeTwo";
+import { HomeFour } from "./pages/home/HomeFour";
 import { CoursesGridView } from "./pages/course/CoursesGridView";
 import { About } from "./pages/about/About";
 import { Error } from "./pages/error/Error";
@@ -17,7 +17,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<HomeTwo />} />
+      <Route path="/" element={<HomeFour />} />
       <Route path="/about" element={<About />} />
       <Route path="/courses" element={<CoursesGridView />} />
       <Route path="/contact" element={<Contact />} />

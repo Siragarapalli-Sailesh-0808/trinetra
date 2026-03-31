@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Trinetra Academy | Premier Coaching for NEET, JEE & EAMCET</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .text-gradient {
+      background: linear-gradient(to right, #004fa8, #0366d6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-primary-fixed-variant": "#004493",
+            "on-tertiary-container": "#e3ecf8",
+            "on-tertiary-fixed-variant": "#3f4851",
+            "tertiary-fixed-dim": "#bec7d3",
+            "surface-dim": "#d8dadc",
+            "primary-fixed-dim": "#adc6ff",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed-dim": "#c2c7cf",
+            "on-secondary-fixed-variant": "#42474e",
+            "surface-container": "#eceef0",
+            background: "#f8f9fb",
+            "on-primary": "#ffffff",
+            "surface-container-highest": "#e0e3e5",
+            "surface-container-high": "#e6e8ea",
+            surface: "#f8f9fb",
+            "primary-fixed": "#d8e2ff",
+            outline: "#727785",
+            "on-tertiary-fixed": "#141c25",
+            "on-surface-variant": "#424753",
+            "secondary-fixed": "#dee3eb",
+            primary: "#004fa8",
+            "on-primary-container": "#e5ebff",
+            "error-container": "#ffdad6",
+            secondary: "#5a5f66",
+            "on-error": "#ffffff",
+            "on-secondary": "#ffffff",
+            "outline-variant": "#c2c6d6",
+            "on-error-container": "#93000a",
+            "on-tertiary": "#ffffff",
+            "on-primary-fixed": "#001a41",
+            "inverse-surface": "#2d3133",
+            "on-secondary-container": "#60656c",
+            "surface-tint": "#005bc0",
+            "on-secondary-fixed": "#171c22",
+            "surface-bright": "#f8f9fb",
+            "inverse-primary": "#adc6ff",
+            tertiary: "#4a535c",
+            "on-surface": "#191c1e",
+            "tertiary-container": "#626b75",
+            "surface-variant": "#e0e3e5",
+            "inverse-on-surface": "#eff1f3",
+            "primary-container": "#0366d6",
+            "surface-container-low": "#f2f4f6",
+            "tertiary-fixed": "#dae3ef",
+            "on-background": "#191c1e",
+            error: "#ba1a1a",
+            "secondary-container": "#dee3eb"
+          },
+          fontFamily: {
+            headline: ["Space Grotesk"],
+            body: ["Inter"],
+            label: ["Inter"]
+          },
+          borderRadius: {
+            DEFAULT: "0.125rem",
+            lg: "0.25rem",
+            xl: "0.5rem",
+            full: "0.75rem"
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body class="bg-surface font-body text-on-surface">
+  <header class="fixed top-0 w-full z-50 border-b border-indigo-100/70">
+    <div class="h-8 bg-slate-950 text-white text-sm flex items-center justify-center px-4">
+      <span class="font-semibold">📢 Admissions Open for 2026 Batch - Limited Seats! Call: 9848137364</span>
+    </div>
+    <nav class="h-20 bg-white/95 backdrop-blur-sm shadow-sm">
+      <div class="max-w-7xl mx-auto h-full px-6 flex items-center justify-between gap-6">
+        <a href="#" class="shrink-0">
+          <img src="/src/assets/img/logio/Logo.png" alt="Trinetra Academy Logo" class="h-14 w-auto object-contain" />
+        </a>
+
+        <div class="hidden md:flex items-center gap-14">
+          <a class="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 transition-colors"
+            href="/" target="_parent">Home</a>
+          <a class="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 transition-colors"
+            href="/about" target="_parent">About</a>
+          <a class="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 transition-colors"
+            href="/courses" target="_parent">Courses</a>
+          <a class="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 transition-colors"
+            href="/contact" target="_parent">Contact</a>
+        </div>
+
+        <button
+          class="bg-[#6253f1] text-white px-10 py-3 rounded-full font-headline font-semibold text-lg hover:bg-[#5446df] transition-all flex items-center gap-2 shadow-md shadow-indigo-200">
+          Enroll Now
+          <span class="material-symbols-outlined text-lg">arrow_forward</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+  <main class="pt-32">
+    <section class="relative min-h-[90vh] flex items-center overflow-hidden bg-[#084b96]">
+      <!-- Classic Constellation Background Lines -->
+      <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-30">
+        <!-- Minimal star lines matching the 'classic' screenshot backdrop -->
+        <svg class="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <line x1="0" y1="20%" x2="40%" y2="0" stroke="white" stroke-width="1" stroke-dasharray="4,4" />
+          <line x1="40%" y1="0" x2="60%" y2="50%" stroke="white" stroke-width="1" stroke-dasharray="4,4" />
+          <line x1="0" y1="80%" x2="30%" y2="100%" stroke="white" stroke-width="1" stroke-dasharray="4,4" />
+          <line x1="60%" y1="50%" x2="100%" y2="20%" stroke="white" stroke-width="1" stroke-dasharray="4,4" />
+        </svg>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-[1.2fr_0.8fr] gap-12 items-center relative z-10 w-full py-20">
+        
+        <!-- LEFT: Classic Typography Block -->
+        <div class="flex flex-col items-center md:items-start text-center md:text-left pt-6">
+          <h3 class="font-headline text-2xl md:text-[28px] font-bold text-blue-200 mb-0 tracking-widest uppercase">
+            First Time in AP
+          </h3>
+          
+          <h1 class="font-headline text-7xl sm:text-8xl md:text-[110px] font-black leading-[0.9] tracking-tighter mb-2 text-transparent bg-clip-text bg-gradient-to-br from-white via-white to-blue-200 drop-shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all duration-700 ease-out hover:scale-[1.03] hover:drop-shadow-[0_0_50px_rgba(255,255,255,0.7)] hover:tracking-tight cursor-default relative z-10">
+            TRINETRA
+          </h1>
+          
+          <h2 class="font-headline text-xl sm:text-2xl font-medium text-white/90 leading-tight mb-1 tracking-wide">
+            For Integrated Intermediate Education
+          </h2>
+          
+          <h3 class="font-headline text-2xl sm:text-3xl font-bold text-white mb-6">
+            With AI Excellence
+          </h3>
+          
+          <div class="relative inline-block mb-10 group cursor-default">
+            <p class="font-headline text-base sm:text-lg font-bold text-white tracking-[0.2em] uppercase pb-2 relative z-10 transition-all duration-300 group-hover:tracking-[0.25em] group-hover:text-blue-100" style="text-shadow: 1px 1px 3px rgba(255,255,255,0.3);">
+              BE FUTURE READY
+            </p>
+            <!-- Thin elegant animated underline -->
+            <div class="absolute bottom-0 left-0 h-[1px] bg-white/40 w-full transition-all duration-700 ease-out group-hover:w-[110%] group-hover:-left-[5%] group-hover:bg-white group-hover:h-[2px] shadow-[0_0_10px_rgba(255,255,255,0.5)]"></div>
+          </div>
+          
+          <div class="flex flex-wrap justify-center md:justify-start gap-5">
+            <a href="/courses" class="bg-white text-[#084b96] px-8 py-4 rounded-full font-headline font-bold text-lg hover:bg-blue-50 transition-all flex items-center gap-2">
+              Join Trinetra Now
+              <span class="material-symbols-outlined font-bold">arrow_forward</span>
+            </a>
+          </div>
+          
+          <!-- Trust Badge embedded inside -->
+          <div class="mt-14 flex items-center gap-6 bg-black/10 backdrop-blur-md p-4 pr-8 rounded-2xl border border-white/10">
+            <div class="flex -space-x-3">
+              <img class="w-12 h-12 rounded-full border-2 border-[#084b96] object-cover" alt="Student" src="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=150&auto=format&fit=crop" />
+              <img class="w-12 h-12 rounded-full border-2 border-[#084b96] object-cover" alt="Student" src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?q=80&w=150&auto=format&fit=crop" />
+              <img class="w-12 h-12 rounded-full border-2 border-[#084b96] object-cover" alt="Student" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=150&auto=format&fit=crop" />
+            </div>
+            <div class="text-left">
+              <p class="font-headline font-bold text-white text-sm md:text-base">15,000+ Students</p>
+              <p class="text-white/80 text-xs mt-0.5">Achieved their dream ranks in 2023</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Image Presentation -->
+        <div class="relative hidden md:block mt-8 md:mt-0">
+          <div class="relative z-10 rounded-[2rem] overflow-hidden border border-white/10 bg-white/5">
+            <img class="w-full h-full object-cover aspect-[4/5] hover:scale-105 transition-transform duration-1000" alt="Students engaged in future-ready education" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1471&auto=format&fit=crop" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#084b96]/90 via-transparent to-transparent"></div>
+          </div>
+          
+          <!-- AI Floating Badge -->
+          <div class="absolute -bottom-6 -left-12 lg:-left-16 z-20 bg-white/10 backdrop-blur-xl p-6 rounded-2xl border border-white/20 w-[280px] hover:-translate-y-2 transition-transform duration-500">
+            <div class="flex items-center gap-4 mb-3">
+              <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">smart_toy</span>
+              </div>
+              <span class="font-headline font-bold text-white text-xl">AI Excellence</span>
+            </div>
+            <p class="text-sm text-white/90 leading-relaxed font-body">Advanced tracking mapping 98% prediction accuracy for seamless rank outcomes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-surface">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+          <div class="max-w-2xl">
+            <h2 class="font-headline text-4xl font-bold tracking-tight text-on-surface mb-4">Targeted Specialization
+            </h2>
+            <p class="text-secondary text-lg">Our curriculum is precision-engineered for the specific demands of
+              national and state-level entrance examinations.</p>
+          </div>
+          <div class="flex gap-2">
+            <div
+              class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-outline cursor-pointer hover:border-primary hover:text-primary transition-all">
+              <span class="material-symbols-outlined">chevron_left</span>
+            </div>
+            <div
+              class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary cursor-pointer hover:opacity-90 transition-all">
+              <span class="material-symbols-outlined">chevron_right</span>
+            </div>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="group bg-surface-container-lowest p-8 rounded-xl transition-all hover:-translate-y-2">
+            <div
+              class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+              <span class="material-symbols-outlined text-3xl">medical_services</span>
+            </div>
+            <h3 class="font-headline text-2xl font-bold mb-4">NEET Intensive</h3>
+            <p class="text-secondary mb-6 text-sm leading-relaxed">Comprehensive biology-focused curriculum with
+              advanced anatomical visualization tools and 500+ daily practice problems.</p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center gap-2 text-sm text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span> NCERT Mastery Modules
+              </li>
+              <li class="flex items-center gap-2 text-sm text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span> 3D Virtual Lab Sessions
+              </li>
+              <li class="flex items-center gap-2 text-sm text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span> Weekly Mock Simulations
+              </li>
+            </ul>
+            <a class="text-primary font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all" href="#">
+              Explore Curriculum <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+
+          <div
+            class="group bg-surface-container-lowest p-8 rounded-xl transition-all hover:-translate-y-2 border-t-4 border-primary shadow-sm">
+            <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center text-on-primary mb-8">
+              <span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
+            </div>
+            <h3 class="font-headline text-2xl font-bold mb-4">JEE Main &amp; Advanced</h3>
+            <p class="text-secondary mb-6 text-sm leading-relaxed">Rigorous mathematical modeling and physics
+              problem-solving marathons led by IITian faculty members.</p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center gap-2 text-sm text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span> Advanced Problem
+                Solving
+              </li>
+              <li class="flex items-center gap-2 text-sm text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span> All India Test Series
+                (AITS)
+              </li>
+              <li class="flex items-center gap-2 text-sm text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span> IIT-Faculty Mentorship
+              </li>
+            </ul>
+            <a class="text-primary font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all" href="#">
+              Explore Curriculum <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+
+          <div class="group bg-surface-container-lowest p-8 rounded-xl transition-all hover:-translate-y-2">
+            <div
+              class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+              <span class="material-symbols-outlined text-3xl">engineering</span>
+            </div>
+            <h3 class="font-headline text-2xl font-bold mb-4">EAMCET Success</h3>
+            <p class="text-secondary mb-6 text-sm leading-relaxed">State-centric approach focused on high-speed
+              calculation techniques and high-weightage topic mastery.</p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center gap-2 text-sm text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span> Speed-Accuracy Training
+              </li>
+              <li class="flex items-center gap-2 text-sm text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span> Previous Year Analysis
+              </li>
+              <li class="flex items-center gap-2 text-sm text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span> State Rank Prediction
+              </li>
+            </ul>
+            <a class="text-primary font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all" href="#">
+              Explore Curriculum <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-surface-container-low">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="space-y-4 pt-12">
+              <div class="bg-surface-container-lowest p-1 rounded-xl shadow-sm">
+                <img class="rounded-lg w-full h-48 object-cover"
+                  alt="close-up of a teacher pointing at a complex chemical formula on a blackboard during a class"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRmJkcVLb41uoF5NzVC3INcpWoc2PLTzMsOEoUc1botPiwUuW7IrNs_SSQhaUHacq-l4GgxJ_jOJotzNWsbr8P6T1wnjgfv2umVI4-jLs_RLOeuK92-TPMnXdqGXurPiF3WuYFtRvknwJlG3Q_fDg0tKpxNxDXp_yKuPnxb1NM7AMZ2I3JM1e1TXlyT8gktJHW-N5FTi50aAaYus96jUrOlC7vWWuKHJafXwD5U7r7fdxRrqIGddSWh9EcjhXgOwo4sl3nPsFNw04" />
+              </div>
+              <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm">
+                <span class="material-symbols-outlined text-primary mb-4"
+                  style="font-variation-settings: 'FILL' 1">groups</span>
+                <h4 class="font-bold text-on-surface mb-2">Expert Faculty</h4>
+                <p class="text-xs text-secondary leading-relaxed">Direct mentorship from Ph.D. holders and industry
+                  veterans.</p>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm">
+                <span class="material-symbols-outlined text-primary mb-4"
+                  style="font-variation-settings: 'FILL' 1">auto_awesome</span>
+                <h4 class="font-bold text-on-surface mb-2">AI-Powered Prep</h4>
+                <p class="text-xs text-secondary leading-relaxed">Personalized learning paths that adapt to your pace.
+                </p>
+              </div>
+              <div class="bg-surface-container-lowest p-1 rounded-xl shadow-sm">
+                <img class="rounded-lg w-full h-64 object-cover"
+                  alt="a digital dashboard showing colorful data visualizations and learning progress charts on a tablet screen"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGDVBC1C48zVyObUryk7ReznIfUFEopjAv7qt-WBxPi8WDS1AXAyTcvHsASGKM5VRbYmcJw0EgAe9IKRoleQoNcplInbwpvBp3XFjQ_ZxIKzHposRvN_i4VsQtxLeKt1jaaMDvR9_IJXuaLSAmNCG1yNCxl706wOxmboymVCx7G_TKOj_MC0Yhrbdjf9f4c03WMX8h95uI1FRK4Y_g7zaAGZdeId-ftRIpG5xhWhvhyXJjHwFk5UuEXuqoOu5jfBf7rTX8dwyhRLk" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 class="font-headline text-4xl font-bold tracking-tight text-on-surface mb-6 leading-tight">The Modern
+              Standard for Scholarly Success</h2>
+            <p class="text-secondary text-lg mb-8 leading-relaxed">We combine traditional pedagogy with futuristic
+              technology to create an environment where learning is not just about memorization, but mastery.</p>
+            <div class="space-y-8">
+              <div class="flex gap-4">
+                <div
+                  class="w-12 h-12 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined">person_search</span>
+                </div>
+                <div>
+                  <h5 class="font-bold text-on-surface mb-1">Personalized Attention</h5>
+                  <p class="text-secondary text-sm">Small batch sizes ensuring that no student's question goes
+                    unanswered, with dedicated doubt-clearing sessions.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div
+                  class="w-12 h-12 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined">analytics</span>
+                </div>
+                <div>
+                  <h5 class="font-bold text-on-surface mb-1">Predictive Rank Analytics</h5>
+                  <p class="text-secondary text-sm">Our AI engine analyzes millions of data points to provide highly
+                    accurate rank predictions and focus area suggestions.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div
+                  class="w-12 h-12 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined">menu_book</span>
+                </div>
+                <div>
+                  <h5 class="font-bold text-on-surface mb-1">Proprietary Study Material</h5>
+                  <p class="text-secondary text-sm">Exclusively curated content that simplifies complex concepts into
+                    intuitive visual maps.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-surface">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="font-headline text-4xl font-bold text-on-surface mb-4">Our Hall of Fame</h2>
+          <p class="text-secondary max-w-xl mx-auto">Witness the extraordinary achievements of students who turned their
+            aspirations into reality with Trinetra Academy.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-auto md:h-[600px]">
+          <div class="md:col-span-2 md:row-span-2 relative rounded-2xl overflow-hidden group">
+            <img
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="cheerful group of university students celebrating and laughing together in a campus quad"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2zQFyjuVRT_LmfAxAAph1hA0c6DNonhlwgSZSLS_ltm26h0C2pRoVAduHBrZwXVhUcncg6k4O_fnTz0WAVYoK7Y1olXBf9dyxySwz1ggIsaSxjf0AztWWc-PcbTVU5y6bm4Nav091Nvg6bLXrvLBr8njSzB_xoJbKl6xClyjsCumEEup06bzJ-KoAnysxCuluBitbZSvsNpcCnDKnYFqXDs2maFjakNTPqtYyhazW4hm-nVp7onSGqI4LEiaYOl_TSABsca0iLoo" />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-10 text-on-primary">
+              <div class="text-4xl font-headline font-bold mb-2">AIR 12</div>
+              <div class="text-xl font-headline font-medium opacity-90 mb-4">NEET 2023 - Ananya Sharma</div>
+              <p class="text-sm opacity-80 max-w-xs">"The AI-driven analytics helped me identify my weak spots in
+                Physics that I never knew existed."</p>
+            </div>
+          </div>
+
+          <div
+            class="bg-surface-container-lowest p-6 rounded-2xl flex flex-col justify-between group hover:bg-primary transition-colors duration-300">
+            <div class="flex justify-between items-start">
+              <img class="w-16 h-16 rounded-full object-cover"
+                alt="portrait of a young man smiling with short hair and modern glasses"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_uDRr0_mEQsDqm197yr0ZjsGG-vPg4omK8bt69YoyCksU5toteR5gCOUGEbMl1TpmR6_JskCgc_1JA6rUuG9hOWTqBYp95mDqIBa5retBvdCa48Hqd0GsSKVOd30PDO-LcpP0Rat0-X-uD9lUB4Py8LVtRpdSlTLhi5D1hy_Qu7tEy-HntBJod7nSdUrQaSUE2qiI92iGxtPFBtYwpyXb7j8-Hhmfas0Db1Ex4YHEp70V21u8krGRILrHfEz746EjLynNGEYK5So" />
+              <div class="text-right">
+                <span class="block font-headline font-bold text-2xl group-hover:text-on-primary">AIR 84</span>
+                <span class="text-xs text-secondary group-hover:text-on-primary/70">JEE Advanced</span>
+              </div>
+            </div>
+            <p class="text-sm text-secondary group-hover:text-on-primary/90 mt-4 italic">"The mock test series was a
+              complete game-changer for my confidence."</p>
+          </div>
+
+          <div
+            class="bg-surface-container-lowest p-6 rounded-2xl flex flex-col justify-between group hover:bg-primary transition-colors duration-300">
+            <div class="flex justify-between items-start">
+              <img class="w-16 h-16 rounded-full object-cover"
+                alt="portrait of a young woman with a friendly smile wearing a denim shirt"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj7I-qevT1Pk4wNEcwSZMzxwNwTMK4w1fJiT_oaqnAbLzFSOM5WfYUEndoCogwizCqVzp410d97xc_MsHTWEtOL7Teb_9j3Vup52jnqfIprbJe8nTw-VevEyo7W9j58EMp3rGre1GTpWdtcXkv5HZKjBGEtaoddH9DbB_AnSQkOMP6CkGBxvlW70-ZbucUyeUVnNutRNiDwyKQ1OzhrEBF8ZxigU57VRJ5kYsFAtLURHK2kdS80ZMHPqgMajVU1gBaydmY2GV1ybs" />
+              <div class="text-right">
+                <span class="block font-headline font-bold text-2xl group-hover:text-on-primary">Rank 5</span>
+                <span class="text-xs text-secondary group-hover:text-on-primary/70">EAMCET</span>
+              </div>
+            </div>
+            <p class="text-sm text-secondary group-hover:text-on-primary/90 mt-4 italic">"Proprietary materials are so
+              concise and well-structured."</p>
+          </div>
+
+          <div class="md:col-span-2 bg-blue-50 dark:bg-slate-900 p-8 rounded-2xl flex items-center justify-between">
+            <div>
+              <h4 class="font-headline font-bold text-2xl text-primary mb-2">Be the next success story.</h4>
+              <p class="text-sm text-on-surface-variant">Join our foundation batch starting next Monday.</p>
+            </div>
+            <button class="bg-primary text-on-primary p-4 rounded-full shadow-lg">
+              <span class="material-symbols-outlined">north_east</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 px-6">
+      <div class="max-w-5xl mx-auto rounded-3xl overflow-hidden relative">
+        <div class="absolute inset-0 bg-primary-container"></div>
+        <div class="absolute inset-0 opacity-20"
+          style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 32px 32px;">
+        </div>
+        <div class="relative z-10 p-12 md:p-20 text-center text-on-primary">
+          <h2 class="font-headline text-4xl md:text-5xl font-bold mb-8">Ready to define your career?</h2>
+          <p class="text-lg opacity-90 mb-12 max-w-2xl mx-auto leading-relaxed">
+            Join Trinetra Academy today and gain access to elite faculty, AI-integrated learning tools, and a community
+            of scholars.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <button
+              class="bg-white text-primary px-10 py-4 rounded-full font-headline font-bold text-lg hover:bg-slate-50 transition-all active:scale-95 shadow-xl">Enroll
+              Now</button>
+            <button
+              class="bg-transparent border border-white/40 text-white px-10 py-4 rounded-full font-headline font-bold text-lg hover:bg-white/10 transition-all">Talk
+              to Academic Counselor</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="w-full border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 py-12">
+    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-start gap-12">
+      <div class="max-w-sm">
+        <div class="mb-4">
+          <img src="/src/assets/img/logio/Logo.png" alt="Trinetra Academy Logo" class="h-14 w-auto object-contain" />
+        </div>
+        <p class="font-['Inter'] text-sm leading-relaxed text-slate-500 dark:text-slate-400">
+          Empowering the next generation of scholars with cutting-edge pedagogy and personalized mentorship.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+        <div>
+          <h4 class="font-headline font-bold text-sm text-on-surface mb-4">Programs</h4>
+          <ul class="space-y-2">
+            <li><a class="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" href="#">NEET
+                Prep</a></li>
+            <li><a class="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" href="#">JEE
+                Main</a></li>
+            <li><a class="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" href="#">JEE
+                Advanced</a></li>
+            <li><a class="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors"
+                href="#">EAMCET</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-headline font-bold text-sm text-on-surface mb-4">Support</h4>
+          <ul class="space-y-2">
+            <li><a class="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" href="#">Contact
+                Support</a></li>
+            <li><a class="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" href="#">Global
+                Centers</a></li>
+            <li><a class="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" href="#">Privacy
+                Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-span-2 md:col-span-1">
+          <h4 class="font-headline font-bold text-sm text-on-surface mb-4">Connect</h4>
+          <div class="flex gap-4">
+            <div
+              class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all cursor-pointer">
+              <span class="material-symbols-outlined text-xl">share</span>
+            </div>
+            <div
+              class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all cursor-pointer">
+              <span class="material-symbols-outlined text-xl">alternate_email</span>
+            </div>
+            <div
+              class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all cursor-pointer">
+              <span class="material-symbols-outlined text-xl">call</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="max-w-7xl mx-auto px-8 pt-12 mt-12 border-t border-slate-200/50 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="font-['Inter'] text-sm text-slate-500">&copy; 2024 Trinetra Academy. Empowering the next generation of
+        scholars.</p>
+      <div class="flex gap-6">
+        <a class="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" href="#">Terms of
+          Service</a>
+        <a class="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" href="#">Privacy
+          Policy</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

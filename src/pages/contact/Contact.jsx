@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 // Premium Unsplash image for Contact splash
 const contactImg = "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1470&auto=format&fit=crop";
 
 export const Contact = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     // Standardize theme variables
     document.documentElement.classList.add('light');
@@ -30,24 +32,45 @@ export const Contact = () => {
         <div className="h-8 bg-slate-950 text-white text-sm flex items-center justify-center px-4">
           <span className="font-semibold">📢 Admissions Open for 2026 Batch - Limited Seats! Call: 9848137364</span>
         </div>
-        <nav className="h-20 bg-white/95 backdrop-blur-sm shadow-sm opacity-100 mix-blend-normal">
-          <div className="max-w-7xl mx-auto h-full px-6 flex items-center justify-between gap-6">
+        <nav className="h-auto sm:h-20 bg-white/95 backdrop-blur-sm shadow-sm opacity-100 mix-blend-normal">
+          <div className="max-w-7xl mx-auto h-full px-3 sm:px-6 flex items-center w-full gap-2 sm:gap-6 py-2 sm:py-0">
             <Link to="/" className="shrink-0">
-              <img src="/logo.png" alt="Trinetra Academy Logo" className="h-14 w-auto object-contain" />
+              <img src="/logo.png" alt="Trinetra Academy Logo" className="h-10 sm:h-14 w-auto object-contain" />
             </Link>
 
-            <div className="hidden md:flex items-center gap-14">
+            <div className="hidden sm:flex flex-1 items-center justify-center gap-14">
               <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary transition-colors" to="/">Home</Link>
               <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary transition-colors" to="/about">About</Link>
               <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary transition-colors" to="/courses">Courses</Link>
               <Link className="font-headline font-semibold text-lg tracking-tight text-primary transition-colors border-b-2 border-primary" to="/contact">Contact</Link>
             </div>
 
-            <button className="bg-[#004fa8] text-white px-10 py-3 rounded-full font-headline font-semibold text-lg hover:bg-[#003b82] transition-all flex items-center gap-2 shadow-md shadow-[#004fa8]/20">
+            <div className="flex-1 sm:hidden"></div>
+
+            <button className="bg-[#004fa8] text-white px-4 sm:px-10 py-2 sm:py-3 rounded-full font-headline font-semibold text-xs sm:text-lg hover:bg-[#003b82] transition-all flex items-center gap-1 sm:gap-2 shadow-md shadow-[#004fa8]/20 whitespace-nowrap shrink-0">
               Enroll Now
-              <span className="material-symbols-outlined text-lg">arrow_forward</span>
+              <span className="material-symbols-outlined text-base sm:text-lg">arrow_forward</span>
+            </button>
+
+            <button
+              aria-label="Open menu"
+              onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+              className="sm:hidden p-2 rounded-lg hover:bg-blue-50 transition-colors shrink-0"
+            >
+              <span className="material-symbols-outlined text-2xl text-slate-800">menu</span>
             </button>
           </div>
+
+          {isMobileMenuOpen && (
+            <div className="sm:hidden bg-white border-t border-[#004fa8]/15 absolute top-full left-0 right-0 shadow-lg">
+              <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-3">
+                <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary hover:bg-blue-50 px-4 py-2 rounded-lg transition-colors" to="/">Home</Link>
+                <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary hover:bg-blue-50 px-4 py-2 rounded-lg transition-colors" to="/about">About</Link>
+                <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary hover:bg-blue-50 px-4 py-2 rounded-lg transition-colors" to="/courses">Courses</Link>
+                <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-primary bg-blue-50 px-4 py-2 rounded-lg transition-colors" to="/contact">Contact</Link>
+              </div>
+            </div>
+          )}
         </nav>
       </header>
 

@@ -1,7 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export const About = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     // Add required body classes for the theme
     document.documentElement.classList.add('light');
@@ -32,24 +34,45 @@ export const About = () => {
         <div className="h-8 bg-slate-950 text-white text-sm flex items-center justify-center px-4">
           <span className="font-semibold">📢 Admissions Open for 2026 Batch - Limited Seats! Call: 9848137364</span>
         </div>
-        <nav className="h-20 bg-white/95 backdrop-blur-sm shadow-sm">
-          <div className="max-w-7xl mx-auto h-full px-6 flex items-center justify-between gap-6">
+        <nav className="h-auto sm:h-20 bg-white/95 backdrop-blur-sm shadow-sm">
+          <div className="max-w-7xl mx-auto h-full px-3 sm:px-6 flex items-center w-full gap-2 sm:gap-6 py-2 sm:py-0">
             <Link to="/" className="shrink-0">
-              <img src="/logo.png" alt="Trinetra Academy Logo" className="h-14 w-auto object-contain" />
+              <img src="/logo.png" alt="Trinetra Academy Logo" className="h-10 sm:h-14 w-auto object-contain" />
             </Link>
 
-            <div className="hidden md:flex items-center gap-14">
+            <div className="hidden sm:flex flex-1 items-center justify-center gap-14">
               <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 transition-colors" to="/">Home</Link>
-              <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 transition-colors" to="/about">About</Link>
+              <Link className="font-headline font-semibold text-lg tracking-tight text-indigo-600 transition-colors border-b-2 border-indigo-600" to="/about">About</Link>
               <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 transition-colors" to="/courses">Courses</Link>
               <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 transition-colors" to="/contact">Contact</Link>
             </div>
 
-            <button className="bg-[#6253f1] text-white px-10 py-3 rounded-full font-headline font-semibold text-lg hover:bg-[#5446df] transition-all flex items-center gap-2 shadow-md shadow-indigo-200">
+            <div className="flex-1 sm:hidden"></div>
+
+            <button className="bg-[#6253f1] text-white px-4 sm:px-10 py-2 sm:py-3 rounded-full font-headline font-semibold text-xs sm:text-lg hover:bg-[#5446df] transition-all flex items-center gap-1 sm:gap-2 shadow-md shadow-indigo-200 whitespace-nowrap shrink-0">
               Enroll Now
-              <span className="material-symbols-outlined text-lg">arrow_forward</span>
+              <span className="material-symbols-outlined text-base sm:text-lg">arrow_forward</span>
+            </button>
+
+            <button
+              aria-label="Open menu"
+              onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+              className="sm:hidden p-2 rounded-lg hover:bg-indigo-50 transition-colors shrink-0"
+            >
+              <span className="material-symbols-outlined text-2xl text-slate-800">menu</span>
             </button>
           </div>
+
+          {isMobileMenuOpen && (
+            <div className="sm:hidden bg-white border-t border-indigo-100/70 absolute top-full left-0 right-0 shadow-lg">
+              <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-3">
+                <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 hover:bg-indigo-50 px-4 py-2 rounded-lg transition-colors" to="/">Home</Link>
+                <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-indigo-600 bg-indigo-50 px-4 py-2 rounded-lg transition-colors" to="/about">About</Link>
+                <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 hover:bg-indigo-50 px-4 py-2 rounded-lg transition-colors" to="/courses">Courses</Link>
+                <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 hover:bg-indigo-50 px-4 py-2 rounded-lg transition-colors" to="/contact">Contact</Link>
+              </div>
+            </div>
+          )}
         </nav>
       </header>
 

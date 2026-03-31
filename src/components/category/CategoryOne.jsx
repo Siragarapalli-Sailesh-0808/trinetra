@@ -11,19 +11,19 @@ const categoryData = [
   {
     delay: 0.25,
     src: categoryIcon1,
-    title: "NEET Coaching",
+    title: "MPC + AI",
     courses: 2,
   },
   {
     delay: 0.3,
     src: categoryIcon2,
-    title: "JEE Coaching",
+    title: "MPC + IIT",
     courses: 2,
   },
   {
     delay: 0.35,
     src: categoryIcon3,
-    title: "Intermediate (MPC/BiPC)",
+    title: "MPC + EAMCET",
     courses: 1,
   },
   {

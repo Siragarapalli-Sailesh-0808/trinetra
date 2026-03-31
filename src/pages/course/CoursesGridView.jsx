@@ -155,42 +155,42 @@ export const CoursesGridView = () => {
 
       <main className="pt-[112px] bg-slate-50">
         {/* Deep Blue Hero Section */}
-        <section className="relative bg-[#004fa8] py-24 md:py-32 overflow-hidden flex items-center justify-center">
+        <section className="relative bg-[#004fa8] py-16 sm:py-24 md:py-32 overflow-hidden flex items-center justify-center">
           {/* Decorative Backdrops */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2"></div>
-             <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#002a63]/40 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/3"></div>
+             <div className="absolute top-0 right-0 w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] bg-white/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2"></div>
+             <div className="absolute bottom-0 left-0 w-[300px] h-[300px] sm:w-[450px] sm:h-[450px] md:w-[600px] md:h-[600px] bg-[#002a63]/40 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/3"></div>
              <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
           </div>
           
-          <div className="relative z-10 text-center max-w-4xl px-6">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white font-headline font-bold uppercase tracking-widest text-sm mb-6 border border-white/20 backdrop-blur-md">Academic Excellence</span>
-            <h1 className="text-5xl md:text-7xl font-headline font-extrabold text-white tracking-tighter mb-6 leading-tight">
+          <div className="relative z-10 text-center max-w-4xl px-4 sm:px-6">
+            <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-white/10 text-white font-headline font-bold uppercase tracking-widest text-xs sm:text-sm mb-4 sm:mb-6 border border-white/20 backdrop-blur-md">Academic Excellence</span>
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-headline font-extrabold text-white tracking-tighter mb-4 sm:mb-6 leading-tight">
               Our Premium <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-white">Programs</span>
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 font-body leading-relaxed max-w-2xl mx-auto">
+            <p className="text-base sm:text-xl md:text-2xl text-blue-100 font-body leading-relaxed max-w-2xl mx-auto">
               Discover cutting-edge curriculum designed by experts to guarantee top-tier results in competitive entrance exams.
             </p>
           </div>
         </section>
 
         {/* Courses Grid Section */}
-        <section className="py-24 px-6 md:px-12 relative">
+        <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-12 relative">
           <div className="max-w-7xl mx-auto">
             {/* Filter / Header */}
-            <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 sm:mb-16 gap-4 sm:gap-6">
               <div>
-                <span className="text-primary font-headline font-bold uppercase tracking-widest text-sm block mb-2">Curriculum</span>
-                <h2 className="text-4xl md:text-5xl font-headline font-extrabold text-slate-900 tracking-tight">Explore Courses</h2>
-                <div className="w-16 h-1.5 bg-primary rounded-full mt-6"></div>
+                <span className="text-primary font-headline font-bold uppercase tracking-widest text-xs sm:text-sm block mb-2">Curriculum</span>
+                <h2 className="text-2xl sm:text-4xl md:text-5xl font-headline font-extrabold text-slate-900 tracking-tight">Explore Courses</h2>
+                <div className="w-16 h-1.5 bg-primary rounded-full mt-4 sm:mt-6"></div>
               </div>
-              <p className="text-slate-500 max-w-md text-lg leading-relaxed">
+              <p className="text-slate-500 max-w-md text-sm sm:text-lg leading-relaxed">
                 Filter through our specialized offerings to find the perfect track for your academic goals from foundational to long-term.
               </p>
             </div>
 
             {/* Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
               {coursesList.map((course) => (
                 <div key={course.id} className="group relative bg-white rounded-3xl border border-slate-200 overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15)] flex flex-col h-full hover:border-[#004fa8]/30">
                   
@@ -200,58 +200,58 @@ export const CoursesGridView = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
                     
                     {/* Tags */}
-                    <div className="absolute top-5 left-5 flex gap-2">
-                       <span className="px-4 py-1.5 bg-white/95 backdrop-blur-md text-[#004fa8] text-xs font-bold uppercase tracking-widest rounded-full shadow-sm">
+                    <div className="absolute top-3 sm:top-5 left-3 sm:left-5 flex gap-2">
+                       <span className="px-3 sm:px-4 py-1 sm:py-1.5 bg-white/95 backdrop-blur-md text-[#004fa8] text-xs font-bold uppercase tracking-widest rounded-full shadow-sm">
                          {course.category}
                        </span>
                     </div>
                     {course.label && (
-                      <div className="absolute top-5 right-5">
-                         <span className="px-4 py-1.5 bg-[#ff4d4f] text-white text-xs font-bold uppercase tracking-widest rounded-full shadow-lg">
+                      <div className="absolute top-3 sm:top-5 right-3 sm:right-5">
+                         <span className="px-3 sm:px-4 py-1 sm:py-1.5 bg-[#ff4d4f] text-white text-xs font-bold uppercase tracking-widest rounded-full shadow-lg">
                            {course.label}
                          </span>
                       </div>
                     )}
                     
                     {/* Floating Info inside Image */}
-                    <div className="absolute bottom-5 left-5 right-5 flex justify-between items-center">
-                       <div className="flex bg-white/20 backdrop-blur-md rounded-2xl p-2.5 gap-4 border border-white/30">
-                          <div className="flex items-center gap-2 text-white text-sm font-semibold">
-                            <span className="material-symbols-outlined text-[18px]">schedule</span> {course.timing}
+                    <div className="absolute bottom-3 sm:bottom-5 left-3 sm:left-5 right-3 sm:right-5 flex justify-between items-center">
+                       <div className="flex bg-white/20 backdrop-blur-md rounded-2xl p-2 sm:p-2.5 gap-2 sm:gap-4 border border-white/30">
+                          <div className="flex items-center gap-1 sm:gap-2 text-white text-xs sm:text-sm font-semibold">
+                            <span className="material-symbols-outlined text-base sm:text-[18px]">schedule</span> <span className="hidden sm:inline">{course.timing}</span>
                           </div>
                        </div>
                     </div>
                   </div>
 
                   {/* Body Container */}
-                  <div className="p-8 flex flex-col flex-1 relative z-10 bg-white">
-                    <div className="flex items-center justify-between mb-5">
+                  <div className="p-4 sm:p-6 md:p-8 flex flex-col flex-1 relative z-10 bg-white">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0 mb-4 sm:mb-5">
                        <div className="flex items-center gap-1.5">
-                         <span className="material-symbols-outlined text-[20px] text-amber-500">star</span>
-                         <span className="font-bold text-slate-800">{course.rating}</span>
-                         <span className="text-slate-400 text-sm">({course.totalRatings})</span>
+                         <span className="material-symbols-outlined text-base sm:text-[20px] text-amber-500">star</span>
+                         <span className="font-bold text-slate-800 text-sm sm:text-base">{course.rating}</span>
+                         <span className="text-slate-400 text-xs sm:text-sm">({course.totalRatings})</span>
                        </div>
-                       <div className="flex items-center gap-2 text-[#004fa8] text-sm font-bold bg-[#004fa8]/10 px-4 py-1.5 rounded-full">
-                          <span className="material-symbols-outlined text-[18px]">group</span> {course.seats}
+                       <div className="flex items-center gap-2 text-[#004fa8] text-xs sm:text-sm font-bold bg-[#004fa8]/10 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full whitespace-nowrap">
+                          <span className="material-symbols-outlined text-base sm:text-[18px]">group</span> <span className="hidden sm:inline">{course.seats}</span>
                        </div>
                     </div>
                     
-                    <h3 className="text-2xl font-headline font-bold text-slate-900 mb-4 group-hover:text-[#004fa8] transition-colors leading-[1.3]">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-headline font-bold text-slate-900 mb-3 sm:mb-4 group-hover:text-[#004fa8] transition-colors leading-tight sm:leading-[1.3]">
                       {course.title}
                     </h3>
                     
-                    <p className="text-slate-500 mb-8 leading-relaxed text-sm flex-1">
+                    <p className="text-slate-500 mb-6 sm:mb-8 leading-relaxed text-xs sm:text-sm flex-1">
                       {course.description}
                     </p>
 
-                    <div className="mb-8 p-5 bg-slate-50 rounded-2xl border border-slate-100 group-hover:bg-[#004fa8]/5 group-hover:border-[#004fa8]/10 transition-colors">
+                    <div className="mb-6 sm:mb-8 p-3 sm:p-5 bg-slate-50 rounded-2xl border border-slate-100 group-hover:bg-[#004fa8]/5 group-hover:border-[#004fa8]/10 transition-colors">
                        <span className="block text-xs font-bold text-[#004fa8] uppercase tracking-wider mb-2">Core Subjects</span>
-                       <span className="font-semibold text-slate-700 text-sm block leading-tight">{course.subjects}</span>
+                       <span className="font-semibold text-slate-700 text-xs sm:text-sm block leading-tight">{course.subjects}</span>
                     </div>
 
-                    <Link to="/contact" className="w-full flex items-center justify-center gap-3 bg-white text-slate-700 border-2 border-slate-200 hover:border-[#004fa8] hover:bg-[#004fa8] hover:text-white px-6 py-4 rounded-xl font-headline font-bold transition-all duration-300 shadow-sm group-hover:shadow-md">
+                    <Link to="/contact" className="w-full flex items-center justify-center gap-2 sm:gap-3 bg-white text-slate-700 border-2 border-slate-200 hover:border-[#004fa8] hover:bg-[#004fa8] hover:text-white px-4 sm:px-6 py-3 sm:py-4 rounded-xl font-headline font-bold text-sm sm:text-base transition-all duration-300 shadow-sm group-hover:shadow-md min-h-[44px]">
                       Enroll Course
-                      <span className="material-symbols-outlined text-[20px]">arrow_forward</span>
+                      <span className="material-symbols-outlined text-base sm:text-[20px]">arrow_forward</span>
                     </Link>
                   </div>
                 </div>
@@ -261,57 +261,57 @@ export const CoursesGridView = () => {
         </section>
       </main>
 
-      <footer className="w-full border-t border-slate-200 bg-slate-900 py-16">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-start gap-12">
+      <footer className="w-full border-t border-slate-200 bg-slate-900 py-12 sm:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex flex-col md:flex-row justify-between items-start gap-8 sm:gap-12">
           <div className="max-w-sm">
-            <div className="mb-6 bg-white p-3 rounded-xl inline-block">
-              <img src="/src/assets/img/logio/Logo.png" alt="Trinetra Academy Logo" className="h-10 w-auto object-contain" />
+            <div className="mb-4 sm:mb-6 bg-white p-2 sm:p-3 rounded-xl inline-block">
+              <img src="/src/assets/img/logio/Logo.png" alt="Trinetra Academy Logo" className="h-8 sm:h-10 w-auto object-contain" />
             </div>
-            <p className="font-body text-sm leading-relaxed text-slate-400">
+            <p className="font-body text-xs sm:text-sm leading-relaxed text-slate-400">
               Empowering the next generation of scholars with cutting-edge pedagogy and personalized mentorship for guaranteed results.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-12 flex-1 md:ml-12">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 sm:gap-12 flex-1 md:ml-12 w-full md:w-auto">
             <div>
-              <h4 className="font-headline font-bold text-lg text-white mb-6">Programs</h4>
-              <ul className="space-y-4">
-                <li><Link className="font-body text-sm text-slate-400 hover:text-white transition-colors" to="#">NEET Prep</Link></li>
-                <li><Link className="font-body text-sm text-slate-400 hover:text-white transition-colors" to="#">JEE Main</Link></li>
-                <li><Link className="font-body text-sm text-slate-400 hover:text-white transition-colors" to="#">JEE Advanced</Link></li>
-                <li><Link className="font-body text-sm text-slate-400 hover:text-white transition-colors" to="#">EAMCET</Link></li>
+              <h4 className="font-headline font-bold text-sm sm:text-lg text-white mb-4 sm:mb-6">Programs</h4>
+              <ul className="space-y-2 sm:space-y-4">
+                <li><Link className="font-body text-xs sm:text-sm text-slate-400 hover:text-white transition-colors" to="#">NEET Prep</Link></li>
+                <li><Link className="font-body text-xs sm:text-sm text-slate-400 hover:text-white transition-colors" to="#">JEE Main</Link></li>
+                <li><Link className="font-body text-xs sm:text-sm text-slate-400 hover:text-white transition-colors" to="#">JEE Advanced</Link></li>
+                <li><Link className="font-body text-xs sm:text-sm text-slate-400 hover:text-white transition-colors" to="#">EAMCET</Link></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-headline font-bold text-lg text-white mb-6">Support</h4>
-              <ul className="space-y-4">
-                <li><Link className="font-body text-sm text-slate-400 hover:text-white transition-colors" to="/contact">Contact Support</Link></li>
-                <li><Link className="font-body text-sm text-slate-400 hover:text-white transition-colors" to="#">Global Centers</Link></li>
-                <li><Link className="font-body text-sm text-slate-400 hover:text-white transition-colors" to="#">Privacy Policy</Link></li>
+              <h4 className="font-headline font-bold text-sm sm:text-lg text-white mb-4 sm:mb-6">Support</h4>
+              <ul className="space-y-2 sm:space-y-4">
+                <li><Link className="font-body text-xs sm:text-sm text-slate-400 hover:text-white transition-colors" to="/contact">Contact Support</Link></li>
+                <li><Link className="font-body text-xs sm:text-sm text-slate-400 hover:text-white transition-colors" to="#">Global Centers</Link></li>
+                <li><Link className="font-body text-xs sm:text-sm text-slate-400 hover:text-white transition-colors" to="#">Privacy Policy</Link></li>
               </ul>
             </div>
             <div className="col-span-2 md:col-span-1">
-              <h4 className="font-headline font-bold text-lg text-white mb-6">Connect</h4>
-              <div className="flex gap-3">
-                <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#004fa8] hover:text-white text-slate-300 transition-all cursor-pointer border border-slate-700">
-                  <span className="material-symbols-outlined text-[20px]">share</span>
+              <h4 className="font-headline font-bold text-sm sm:text-lg text-white mb-4 sm:mb-6">Connect</h4>
+              <div className="flex gap-2 sm:gap-3">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#004fa8] hover:text-white text-slate-300 transition-all cursor-pointer border border-slate-700">
+                  <span className="material-symbols-outlined text-base sm:text-[20px]">share</span>
                 </div>
-                <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#004fa8] hover:text-white text-slate-300 transition-all cursor-pointer border border-slate-700">
-                  <span className="material-symbols-outlined text-[20px]">alternate_email</span>
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#004fa8] hover:text-white text-slate-300 transition-all cursor-pointer border border-slate-700">
+                  <span className="material-symbols-outlined text-base sm:text-[20px]">alternate_email</span>
                 </div>
-                <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#004fa8] hover:text-white text-slate-300 transition-all cursor-pointer border border-slate-700">
-                  <span className="material-symbols-outlined text-[20px]">call</span>
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#004fa8] hover:text-white text-slate-300 transition-all cursor-pointer border border-slate-700">
+                  <span className="material-symbols-outlined text-base sm:text-[20px]">call</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-12 mt-12 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="font-body text-sm text-slate-500">&copy; 2024 Trinetra Academy. Empowering the next generation of scholars.</p>
-          <div className="flex gap-8">
-            <Link className="font-body text-sm text-slate-500 hover:text-white transition-colors" to="#">Terms of Service</Link>
-            <Link className="font-body text-sm text-slate-500 hover:text-white transition-colors" to="#">Privacy Policy</Link>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 pt-8 sm:pt-12 mt-8 sm:mt-12 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6">
+          <p className="font-body text-xs sm:text-sm text-slate-500 text-center md:text-left">&copy; 2024 Trinetra Academy. Empowering the next generation of scholars.</p>
+          <div className="flex gap-4 sm:gap-8">
+            <Link className="font-body text-xs sm:text-sm text-slate-500 hover:text-white transition-colors" to="#">Terms of Service</Link>
+            <Link className="font-body text-xs sm:text-sm text-slate-500 hover:text-white transition-colors" to="#">Privacy Policy</Link>
           </div>
         </div>
       </footer>

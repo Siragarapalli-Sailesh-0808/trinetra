@@ -37,30 +37,30 @@ const categoryData = [
 export const CategoryOne = () => {
   return (
     <section>
-      <div className="td_height_112 td_height_lg_75" />
-      <div className="container">
+      <div className="td_height_50 sm:td_height_75 td_height_lg_75" />
+      <div className="container px-4 sm:px-6">
         <div
-          className="td_section_heading td_style_1 td_type_1 wow fadeInUp"
+          className="td_section_heading td_style_1 td_type_1 wow fadeInUp flex flex-col md:flex-row justify-between gap-6 sm:gap-8"
           data-wow-duration="1s"
           data-wow-delay="0.2s"
         >
           <div className="td_section_heading_left">
-            <p className="td_section_subtitle_up td_fs_18 td_semibold td_spacing_1 td_mb_10 text-uppercase td_accent_color">
+            <p className="td_section_subtitle_up td_fs_14 sm:td_fs_18 td_semibold td_spacing_1 td_mb_10 text-uppercase td_accent_color">
               <i></i>
               Browse Categories
               <i></i>
             </p>
-            <h2 className="td_section_title td_fs_48 mb-0">
+            <h2 className="td_section_title td_fs_32 sm:td_fs_48 mb-0 leading-tight">
               Explore Our Programs
             </h2>
           </div>
           <div className="td_section_heading_right">
-            <p className="td_section_subtitle td_fs_18 td_mb_16 td_heading_color td_opacity_9">
-              Choose from our specialized coaching programs designed for NEET, JEE, and Intermediate students with expert faculty and proven results.
+            <p className="td_section_subtitle td_fs_14 sm:td_fs_18 td_mb_16 td_heading_color td_opacity_9">
+              Choose from our specialized coaching programs designed for MPC, IIT, and competitive entrance exams with expert faculty and proven results.
             </p>
             <Link
               to="/courses"
-              className="td_btn td_style_2 td_heading_color td_medium td_mb_10"
+              className="td_btn td_style_2 td_heading_color td_medium td_mb_10 inline-block"
             >
               See all Courses
               <i>
@@ -112,10 +112,10 @@ export const CategoryOne = () => {
             </Link>
           </div>
         </div>
-        <div className="td_height_50 td_height_lg_50" />
+        <div className="td_height_30 sm:td_height_50" />
 
         {/* category cards */}
-        <div className="row td_gap_y_24">
+        <div className="row td_gap_y_24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
           {categoryData.map((category, index) => (
             <CategoryOneItem
               key={index}
@@ -128,7 +128,7 @@ export const CategoryOne = () => {
         </div>
       </div>
 
-      <div className="td_height_120 td_height_lg_80" />
+      <div className="td_height_60 sm:td_height_80 td_height_lg_80" />
     </section>
   );
 };

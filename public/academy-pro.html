@@ -108,13 +108,13 @@
       <span class="font-semibold">📢 Admissions Open for 2026 Batch - Limited Seats! Call: 9848137364</span>
     </div>
     <nav class="h-auto sm:h-20 bg-white/95 backdrop-blur-sm shadow-sm">
-      <div class="max-w-7xl mx-auto h-full px-3 sm:px-6 flex items-center justify-between gap-2 sm:gap-6 py-2 sm:py-0">
+      <div class="max-w-7xl mx-auto h-full px-3 sm:px-6 flex items-center w-full gap-2 sm:gap-6 py-2 sm:py-0">
         <a href="#" class="shrink-0">
           <img src="/src/assets/img/logio/Logo.png" alt="Trinetra Academy Logo" class="h-10 sm:h-14 w-auto object-contain" />
         </a>
 
         <!-- Desktop Navigation (hidden on mobile) -->
-        <div class="hidden sm:flex items-center gap-14">
+        <div class="hidden sm:flex flex-1 items-center justify-center gap-14">
           <a class="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 transition-colors"
             href="/" target="_parent">Home</a>
           <a class="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 transition-colors"
@@ -125,15 +125,18 @@
             href="/contact" target="_parent">Contact</a>
         </div>
 
-        <!-- Mobile Hamburger Button (shown only on mobile) -->
-        <button id="mobile-menu-btn" class="sm:hidden p-2 rounded-lg hover:bg-indigo-50 transition-colors">
-          <span class="material-symbols-outlined text-2xl text-slate-800">menu</span>
-        </button>
+        <!-- Mobile Spacer (pushes Enroll to middle) -->
+        <div class="flex-1 sm:hidden"></div>
 
         <button
-          class="bg-[#6253f1] text-white px-4 sm:px-10 py-2 sm:py-3 rounded-full font-headline font-semibold text-xs sm:text-lg hover:bg-[#5446df] transition-all flex items-center gap-1 sm:gap-2 shadow-md shadow-indigo-200 whitespace-nowrap">
+          class="bg-[#6253f1] text-white px-4 sm:px-10 py-2 sm:py-3 rounded-full font-headline font-semibold text-xs sm:text-lg hover:bg-[#5446df] transition-all flex items-center gap-1 sm:gap-2 shadow-md shadow-indigo-200 whitespace-nowrap shrink-0">
           Enroll Now
           <span class="material-symbols-outlined text-base sm:text-lg">arrow_forward</span>
+        </button>
+
+        <!-- Mobile Hamburger Button (shown only on mobile) -->
+        <button id="mobile-menu-btn" class="sm:hidden p-2 rounded-lg hover:bg-indigo-50 transition-colors shrink-0">
+          <span class="material-symbols-outlined text-2xl text-slate-800">menu</span>
         </button>
       </div>
 

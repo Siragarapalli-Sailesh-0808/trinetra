@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { AdmissionFormModal } from "../../components/shared/AdmissionFormModal";
 
 export const About = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isAdmissionFormOpen, setIsAdmissionFormOpen] = useState(false);
 
   useEffect(() => {
     // Add required body classes for the theme
@@ -57,7 +59,11 @@ export const About = () => {
 
             <div className="flex-1 sm:hidden"></div>
 
-            <button className="bg-[#6253f1] text-white px-4 sm:px-10 py-2 sm:py-3 rounded-full font-headline font-semibold text-xs sm:text-lg hover:bg-[#5446df] transition-all flex items-center gap-1 sm:gap-2 shadow-md shadow-indigo-200 whitespace-nowrap shrink-0">
+            <button
+              type="button"
+              onClick={() => setIsAdmissionFormOpen(true)}
+              className="bg-[#6253f1] text-white px-4 sm:px-10 py-2 sm:py-3 rounded-full font-headline font-semibold text-xs sm:text-lg hover:bg-[#5446df] transition-all flex items-center gap-1 sm:gap-2 shadow-md shadow-indigo-200 whitespace-nowrap shrink-0"
+            >
               Enroll Now
               <span className="material-symbols-outlined text-base sm:text-lg">arrow_forward</span>
             </button>
@@ -212,12 +218,24 @@ export const About = () => {
                 <p className="text-on-surface-variant max-w-xl">Our proprietary AI engine maps your career trajectory from day one, suggesting modules and industry connections that match your unique cognitive profile.</p>
               </div>
               <div className="relative w-full md:w-auto">
-                <button className="bg-primary text-white w-full md:w-auto px-10 py-5 rounded-2xl font-headline font-extrabold text-lg hover:shadow-2xl hover:shadow-primary/30 transition-all">Start Your Assessment</button>
+                <button
+                  type="button"
+                  onClick={() => setIsAdmissionFormOpen(true)}
+                  className="bg-primary text-white w-full md:w-auto px-10 py-5 rounded-2xl font-headline font-extrabold text-lg hover:shadow-2xl hover:shadow-primary/30 transition-all"
+                >
+                  Start Your Assessment
+                </button>
               </div>
             </div>
           </div>
         </section>
       </main>
+
+      <AdmissionFormModal
+        isOpen={isAdmissionFormOpen}
+        onClose={() => setIsAdmissionFormOpen(false)}
+        source="about-page"
+      />
 
       <footer className="w-full border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 py-12">
         <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-start gap-12">

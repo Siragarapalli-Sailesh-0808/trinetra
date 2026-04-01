@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { AdmissionFormModal } from "../../components/shared/AdmissionFormModal";
 
 // Premium Unsplash image for Contact splash
 const contactImg = "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1470&auto=format&fit=crop";
 
 export const Contact = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isAdmissionFormOpen, setIsAdmissionFormOpen] = useState(false);
 
   useEffect(() => {
     // Standardize theme variables
@@ -55,7 +57,11 @@ export const Contact = () => {
 
             <div className="flex-1 sm:hidden"></div>
 
-            <button className="bg-[#004fa8] text-white px-4 sm:px-10 py-2 sm:py-3 rounded-full font-headline font-semibold text-xs sm:text-lg hover:bg-[#003b82] transition-all flex items-center gap-1 sm:gap-2 shadow-md shadow-[#004fa8]/20 whitespace-nowrap shrink-0">
+            <button
+              type="button"
+              onClick={() => setIsAdmissionFormOpen(true)}
+              className="bg-[#004fa8] text-white px-4 sm:px-10 py-2 sm:py-3 rounded-full font-headline font-semibold text-xs sm:text-lg hover:bg-[#003b82] transition-all flex items-center gap-1 sm:gap-2 shadow-md shadow-[#004fa8]/20 whitespace-nowrap shrink-0"
+            >
               Enroll Now
               <span className="material-symbols-outlined text-base sm:text-lg">arrow_forward</span>
             </button>
@@ -114,9 +120,13 @@ export const Contact = () => {
                 <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-6 rounded-2xl shadow-xl z-20 border border-white/40 transform translate-y-2 opacity-90 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                   <h3 className="font-headline font-bold text-[#004fa8] text-xl mb-2">Ready to Enroll?</h3>
                   <p className="text-slate-600 text-sm mb-4">Our admissions officers are available to help you register for the upcoming batch.</p>
-                  <a href="tel:+918639096679" className="inline-flex items-center gap-2 bg-[#004fa8] text-white px-5 py-2.5 rounded-lg font-bold text-sm shadow-md hover:bg-[#003b82] transition-colors">
+                  <button
+                    type="button"
+                    onClick={() => setIsAdmissionFormOpen(true)}
+                    className="inline-flex items-center gap-2 bg-[#004fa8] text-white px-5 py-2.5 rounded-lg font-bold text-sm shadow-md hover:bg-[#003b82] transition-colors"
+                  >
                     <span className="material-symbols-outlined text-sm">phone_in_talk</span> Call Admissions
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -186,6 +196,12 @@ export const Contact = () => {
           </div>
         </div>
       </main>
+
+      <AdmissionFormModal
+        isOpen={isAdmissionFormOpen}
+        onClose={() => setIsAdmissionFormOpen(false)}
+        source="contact-page"
+      />
 
       <footer className="w-full border-t border-slate-200 bg-slate-900 py-16">
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-start gap-12">

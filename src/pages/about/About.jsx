@@ -112,17 +112,17 @@ export const About = () => {
           <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#0366d6]/20 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3"></div>
 
           <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
-            <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-              <div className="max-w-2xl">
-                <div className="flex items-center gap-3 mb-4">
+            <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-14 md:mb-20 gap-8 md:gap-10">
+              <div className="max-w-2xl text-center md:text-left">
+                <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
                   <span className="w-12 h-1 bg-white/30 rounded-full"></span>
                   <span className="text-white/80 font-headline font-bold uppercase tracking-widest text-sm">Navigate Your Future</span>
                 </div>
-                <h2 className="text-5xl md:text-7xl font-headline font-extrabold tracking-tight leading-[1.1]">
+                <h2 className="text-4xl sm:text-5xl md:text-7xl font-headline font-extrabold tracking-tight leading-[1.1]">
                   Experience <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/60">Trinetra</span>
                 </h2>
               </div>
-              <p className="text-white/70 max-w-md font-body text-lg leading-relaxed mb-4">
+              <p className="text-white/70 max-w-md font-body text-base sm:text-lg leading-relaxed text-center md:text-left mb-0 md:mb-4">
                 Beyond the classroom, we foster a community that thrives on creativity, health, and competitive excellence.
               </p>
             </div>

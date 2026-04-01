@@ -94,7 +94,7 @@ const coursesList = [
       seats: 30,
       timing: "7:00 PM - 9:00 PM",
       category: "Regular",
-      title: "MPC + Regular",
+      title: "MPC Regular",
       description: "Comprehensive science curriculum with emphasis on theoretical understanding plus problem-solving skills. Builds strong fundamentals in Math, Physics, and Chemistry. Learning style: Theoretical + practical. Skills gained: Strong basics in science. Career scope: Engineering, core sciences. Future demand: Good.",
       subjects: "Math, Physics, Chemistry",
       learningStyle: "Theoretical + Problem Solving",
@@ -127,12 +127,20 @@ export const CoursesGridView = () => {
     };
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflowY = isMobileMenuOpen ? "hidden" : "auto";
+
+    return () => {
+      document.body.style.overflowY = "auto";
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <>
       {/* Header synchronized from verified layout */}
       <header className="fixed top-0 w-full z-[100] border-b border-[#004fa8]/10">
         <div className="h-8 bg-slate-950 text-white text-sm flex items-center justify-center px-4">
-          <span className="font-semibold">📢 Admissions Open for 2026 Batch - Limited Seats! Call: 9848137364</span>
+          <span className="font-semibold">📢 Admissions Open for 2026- 2027 Batch - Limited Seats! Call on :+91 8639096679, +91 7569316737</span>
         </div>
         <nav className="h-auto sm:h-20 bg-white/95 backdrop-blur-sm shadow-sm opacity-100 mix-blend-normal">
           <div className="max-w-7xl mx-auto h-full px-3 sm:px-6 flex items-center w-full gap-2 sm:gap-6 py-2 sm:py-0">
@@ -142,7 +150,7 @@ export const CoursesGridView = () => {
 
             <div className="hidden sm:flex flex-1 items-center justify-center gap-14">
               <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary transition-colors" to="/">Home</Link>
-              <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary transition-colors" to="/about">About</Link>
+              <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary transition-colors" to="/about">About Us</Link>
               <Link className="font-headline font-semibold text-lg tracking-tight text-primary transition-colors border-b-2 border-primary" to="/courses">Courses</Link>
               <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary transition-colors" to="/contact">Contact</Link>
             </div>
@@ -167,7 +175,7 @@ export const CoursesGridView = () => {
             <div className="sm:hidden bg-white border-t border-[#004fa8]/15 absolute top-full left-0 right-0 shadow-lg">
               <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-3">
                 <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary hover:bg-blue-50 px-4 py-2 rounded-lg transition-colors" to="/">Home</Link>
-                <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary hover:bg-blue-50 px-4 py-2 rounded-lg transition-colors" to="/about">About</Link>
+                <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary hover:bg-blue-50 px-4 py-2 rounded-lg transition-colors" to="/about">About Us</Link>
                 <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-primary bg-blue-50 px-4 py-2 rounded-lg transition-colors" to="/courses">Courses</Link>
                 <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary hover:bg-blue-50 px-4 py-2 rounded-lg transition-colors" to="/contact">Contact</Link>
               </div>
@@ -192,7 +200,7 @@ export const CoursesGridView = () => {
               Our Premium <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-white">Programs</span>
             </h1>
             <p className="text-base sm:text-xl md:text-2xl text-blue-100 font-body leading-relaxed max-w-2xl mx-auto">
-              Discover cutting-edge curriculum designed by experts to guarantee top-tier results in competitive entrance exams.
+              Discover cutting-edge curriculum designed by experts to guarantee top-tier results in competitive entrance exams like IIT-JEE, EAMCET, MPC & BIPC with AI.
             </p>
           </div>
         </section>
@@ -236,14 +244,6 @@ export const CoursesGridView = () => {
                       </div>
                     )}
                     
-                    {/* Floating Info inside Image */}
-                    <div className="absolute bottom-3 sm:bottom-5 left-3 sm:left-5 right-3 sm:right-5 flex justify-between items-center">
-                       <div className="flex bg-white/20 backdrop-blur-md rounded-2xl p-2 sm:p-2.5 gap-2 sm:gap-4 border border-white/30">
-                          <div className="flex items-center gap-1 sm:gap-2 text-white text-xs sm:text-sm font-semibold">
-                            <span className="material-symbols-outlined text-base sm:text-[18px]">schedule</span> <span className="hidden sm:inline">{course.timing}</span>
-                          </div>
-                       </div>
-                    </div>
                   </div>
 
                   {/* Body Container */}

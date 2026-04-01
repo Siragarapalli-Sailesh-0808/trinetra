@@ -27,12 +27,20 @@ export const About = () => {
     };
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflowY = isMobileMenuOpen ? "hidden" : "auto";
+
+    return () => {
+      document.body.style.overflowY = "auto";
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <>
       {/* TopAppBar */}
       <header className="fixed top-0 w-full z-[100] border-b border-indigo-100/70">
         <div className="h-8 bg-slate-950 text-white text-sm flex items-center justify-center px-4">
-          <span className="font-semibold">📢 Admissions Open for 2026 Batch - Limited Seats! Call: 9848137364</span>
+          <span className="font-semibold">📢 Admissions Open for 2026- 2027 Batch - Limited Seats! Call on :+91 8639096679, +91 7569316737</span>
         </div>
         <nav className="h-auto sm:h-20 bg-white/95 backdrop-blur-sm shadow-sm">
           <div className="max-w-7xl mx-auto h-full px-3 sm:px-6 flex items-center w-full gap-2 sm:gap-6 py-2 sm:py-0">
@@ -42,7 +50,7 @@ export const About = () => {
 
             <div className="hidden sm:flex flex-1 items-center justify-center gap-14">
               <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 transition-colors" to="/">Home</Link>
-              <Link className="font-headline font-semibold text-lg tracking-tight text-indigo-600 transition-colors border-b-2 border-indigo-600" to="/about">About</Link>
+              <Link className="font-headline font-semibold text-lg tracking-tight text-indigo-600 transition-colors border-b-2 border-indigo-600" to="/about">About Us</Link>
               <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 transition-colors" to="/courses">Courses</Link>
               <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 transition-colors" to="/contact">Contact</Link>
             </div>
@@ -67,7 +75,7 @@ export const About = () => {
             <div className="sm:hidden bg-white border-t border-indigo-100/70 absolute top-full left-0 right-0 shadow-lg">
               <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-3">
                 <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 hover:bg-indigo-50 px-4 py-2 rounded-lg transition-colors" to="/">Home</Link>
-                <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-indigo-600 bg-indigo-50 px-4 py-2 rounded-lg transition-colors" to="/about">About</Link>
+                <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-indigo-600 bg-indigo-50 px-4 py-2 rounded-lg transition-colors" to="/about">About Us</Link>
                 <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 hover:bg-indigo-50 px-4 py-2 rounded-lg transition-colors" to="/courses">Courses</Link>
                 <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 hover:bg-indigo-50 px-4 py-2 rounded-lg transition-colors" to="/contact">Contact</Link>
               </div>
@@ -93,40 +101,6 @@ export const About = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-primary text-white px-8 py-4 rounded-xl font-headline font-bold hover:opacity-90 transition-all shadow-xl shadow-primary/20">Explore Campus</button>
               <button className="border border-outline text-on-surface px-8 py-4 rounded-xl font-headline font-bold hover:bg-slate-50 transition-all">Learn More</button>
-            </div>
-          </div>
-        </section>
-
-        {/* Diversity Section */}
-        <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
-          <div className="mb-16">
-            <span className="text-primary font-headline font-bold uppercase tracking-widest text-sm mb-2 block">Our Impact</span>
-            <h2 className="text-3xl md:text-5xl font-headline font-extrabold text-on-surface tracking-tight mb-4">The most Diverse University</h2>
-            <div className="w-20 h-1.5 bg-primary rounded-full"></div>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Graduate Program */}
-            <div className="group relative overflow-hidden rounded-3xl bg-surface-variant flex flex-col justify-end p-8 md:p-12 transition-all hover:shadow-2xl">
-              <img className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-700" data-alt="advanced graduate students collaborating in a high-tech laboratory" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfQ_bu1GzM66dOprsPwb6eAb5JnD4JpiWdTpeFlZ5mQD9jymV7ZvXlNLuolyimHqNdFCrXWSK_WvXr14gvr8qLE5slz45ptICgqr6JV9jhWxRqyE8BAdOGmanIDBFDGkbdsOe-BYOqFPyPXu6k_dETSX54K2TtJtawWtZhBwiNewlSZgTialKlJmbKdQFv8nsRFfYTla2eLjVUKVHD1T4fVu1MKlbR2aajkawx15YXtH0-Y6FOGsio7QlJv82QSUxGkaiNmT73OnhB" alt="Graduate Program"/>
-              <div className="relative z-10">
-                <h3 className="text-3xl font-headline font-bold text-on-surface mb-4">Graduate Program</h3>
-                <p className="text-on-surface-variant mb-6 leading-relaxed">Advanced specializations in Neural Networks, Quantum Computing, and Ethical AI Systems.</p>
-                <button className="flex items-center gap-2 text-primary font-bold group-hover:gap-4 transition-all">
-                  View Curriculum <span className="material-symbols-outlined">arrow_forward</span>
-                </button>
-              </div>
-            </div>
-
-            {/* Undergraduate Program */}
-            <div className="group relative overflow-hidden rounded-3xl bg-surface-variant flex flex-col justify-end p-8 md:p-12 transition-all hover:shadow-2xl">
-              <img className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-700" data-alt="diverse group of undergraduate students in a modern workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbH0mjzjWwrXoB7udxObZfyUo2TDPnb1vwjE3oGbamFMUFw3LdHEot6Xq_OLcm_Ao4kiKaAljUBlvfcADJia4wq9kYGS0Q9BLsBMUXG_ZkO5vnEZyNkv3yLNgpC36lydExShdn-Oypp5AqIF2MUNQbm-jA6JDrLhRfATrzXSFNpJWoEjHd82MKqpQLK7EaGfPfhh9WZiRdJ5sN2YH-zr3Yy9_fbk7Q9HhMy8foPEdYsTOST4oTqS4n50jYQHCwPuC7Zor83rsbIunZ" alt="Undergraduate Program"/>
-              <div className="relative z-10">
-                <h3 className="text-3xl font-headline font-bold text-on-surface mb-4">Undergraduate Program</h3>
-                <p className="text-on-surface-variant mb-6 leading-relaxed">Foundational excellence across science, arts, and commerce with AI personalized paths.</p>
-                <button className="flex items-center gap-2 text-primary font-bold group-hover:gap-4 transition-all">
-                  Explore Degrees <span className="material-symbols-outlined">arrow_forward</span>
-                </button>
-              </div>
             </div>
           </div>
         </section>

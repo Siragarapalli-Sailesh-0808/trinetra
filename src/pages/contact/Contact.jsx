@@ -25,12 +25,20 @@ export const Contact = () => {
     };
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflowY = isMobileMenuOpen ? "hidden" : "auto";
+
+    return () => {
+      document.body.style.overflowY = "auto";
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <>
       {/* Header synchronized from verified layout */}
       <header className="fixed top-0 w-full z-[100] border-b border-[#004fa8]/10">
         <div className="h-8 bg-slate-950 text-white text-sm flex items-center justify-center px-4">
-          <span className="font-semibold">📢 Admissions Open for 2026 Batch - Limited Seats! Call: 9848137364</span>
+          <span className="font-semibold">📢 Admissions Open for 2026- 2027 Batch - Limited Seats! Call on :+91 8639096679, +91 7569316737</span>
         </div>
         <nav className="h-auto sm:h-20 bg-white/95 backdrop-blur-sm shadow-sm opacity-100 mix-blend-normal">
           <div className="max-w-7xl mx-auto h-full px-3 sm:px-6 flex items-center w-full gap-2 sm:gap-6 py-2 sm:py-0">
@@ -40,7 +48,7 @@ export const Contact = () => {
 
             <div className="hidden sm:flex flex-1 items-center justify-center gap-14">
               <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary transition-colors" to="/">Home</Link>
-              <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary transition-colors" to="/about">About</Link>
+              <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary transition-colors" to="/about">About Us</Link>
               <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary transition-colors" to="/courses">Courses</Link>
               <Link className="font-headline font-semibold text-lg tracking-tight text-primary transition-colors border-b-2 border-primary" to="/contact">Contact</Link>
             </div>
@@ -65,7 +73,7 @@ export const Contact = () => {
             <div className="sm:hidden bg-white border-t border-[#004fa8]/15 absolute top-full left-0 right-0 shadow-lg">
               <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-3">
                 <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary hover:bg-blue-50 px-4 py-2 rounded-lg transition-colors" to="/">Home</Link>
-                <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary hover:bg-blue-50 px-4 py-2 rounded-lg transition-colors" to="/about">About</Link>
+                <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary hover:bg-blue-50 px-4 py-2 rounded-lg transition-colors" to="/about">About Us</Link>
                 <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary hover:bg-blue-50 px-4 py-2 rounded-lg transition-colors" to="/courses">Courses</Link>
                 <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-primary bg-blue-50 px-4 py-2 rounded-lg transition-colors" to="/contact">Contact</Link>
               </div>
@@ -87,7 +95,7 @@ export const Contact = () => {
               Get In Touch With Us
             </h1>
             <p className="text-lg md:text-xl text-blue-100 font-body max-w-2xl mx-auto">
-              We're here to answer any questions you have about our curriculum, admissions, or campus life.
+              We're here to answer any questions you have about our curriculum, admissions or campus life.
             </p>
           </div>
         </section>
@@ -106,7 +114,7 @@ export const Contact = () => {
                 <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-6 rounded-2xl shadow-xl z-20 border border-white/40 transform translate-y-2 opacity-90 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                   <h3 className="font-headline font-bold text-[#004fa8] text-xl mb-2">Ready to Enroll?</h3>
                   <p className="text-slate-600 text-sm mb-4">Our admissions officers are available to help you register for the upcoming batch.</p>
-                  <a href="tel:9848137364" className="inline-flex items-center gap-2 bg-[#004fa8] text-white px-5 py-2.5 rounded-lg font-bold text-sm shadow-md hover:bg-[#003b82] transition-colors">
+                  <a href="tel:+918639096679" className="inline-flex items-center gap-2 bg-[#004fa8] text-white px-5 py-2.5 rounded-lg font-bold text-sm shadow-md hover:bg-[#003b82] transition-colors">
                     <span className="material-symbols-outlined text-sm">phone_in_talk</span> Call Admissions
                   </a>
                 </div>
@@ -127,10 +135,10 @@ export const Contact = () => {
                     <span className="material-symbols-outlined text-[24px] text-[#004fa8]">location_on</span>
                   </div>
                   <div>
-                    <h4 className="font-headline font-bold text-xl text-slate-800 mb-2">Visit Us</h4>
+                    <h4 className="font-headline font-bold text-xl text-slate-800 mb-2">Address</h4>
                     <p className="text-slate-600 leading-relaxed font-body">
-                      J.N. Road, Opposite Reliance Digital,<br />
-                      Rajahmundry – 533103
+                      Street Opposite Sri Venkateswara Swamy Temple, Pittalavani cheruvu,<br />
+                      Morampudi, Rajahmundry, Andhra Pradesh 533107
                     </p>
                   </div>
                 </div>
@@ -143,9 +151,8 @@ export const Contact = () => {
                   <div>
                     <h4 className="font-headline font-bold text-xl text-slate-800 mb-2">Direct Lines</h4>
                     <div className="space-y-1">
-                      <a href="tel:9848137364" className="block text-slate-600 hover:text-[#004fa8] font-medium transition-colors">9848137364</a>
-                      <a href="tel:6306466692" className="block text-slate-600 hover:text-[#004fa8] font-medium transition-colors">6306466692</a>
-                      <a href="tel:+918833500136" className="block text-slate-600 hover:text-[#004fa8] font-medium transition-colors">+91 883 3500 136</a>
+                      <a href="tel:+918639096679" className="block text-slate-600 hover:text-[#004fa8] font-medium transition-colors">+91 8639096679</a>
+                      <a href="tel:+917569316737" className="block text-slate-600 hover:text-[#004fa8] font-medium transition-colors">+91 7569316737</a>
                     </div>
                   </div>
                 </div>

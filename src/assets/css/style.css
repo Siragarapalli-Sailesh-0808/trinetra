@@ -155,7 +155,7 @@ html {
 
 body {
   -ms-scroll-chaining: none;
-  overscroll-behavior: none;
+  overscroll-behavior-y: auto;
 }
 
 h1,

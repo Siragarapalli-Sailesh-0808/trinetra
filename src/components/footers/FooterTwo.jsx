@@ -20,16 +20,15 @@ export const FooterTwo = () => {
               <ul className="td_footer_address_widget td_medium td_mp_0">
                 <li>
                   <i className="fa-solid fa-phone-volume"></i>
-                  <a href="tel:9848137364">9848137364</a> / <a href="tel:6306466692">6306466692</a>
+                  <a href="tel:+918639096679">+91 8639096679</a> / <a href="tel:+917569316737">+91 7569316737</a>
                 </li>
                 <li>
                   <i className="fa-solid fa-phone"></i>
-                  <a href="tel:+918833500136">+91 8833500136</a>
+                  <a href="tel:+918639096679">+91 8639096679</a>
                 </li>
                 <li>
-                  <i className="fa-solid fa-location-dot"></i>J.N. Road, <br />
-                  Opposite Reliance Digital, <br />
-                  Rajahmundry – 533103
+                  <i className="fa-solid fa-location-dot"></i>Street Opposite Sri Venkateswara Swamy Temple, Pittalavani cheruvu, <br />
+                  Morampudi, Rajahmundry, Andhra Pradesh 533107
                 </li>
               </ul>
             </div>

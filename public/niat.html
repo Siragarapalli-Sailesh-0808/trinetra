@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Trinetra Academy | NIAT</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Montserrat:wght@800&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    }
+
+    .trinetra-wordmark {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+    }
+  </style>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-primary-fixed-variant": "#004493",
+            "on-tertiary-container": "#e3ecf8",
+            "on-tertiary-fixed-variant": "#3f4851",
+            "tertiary-fixed-dim": "#bec7d3",
+            "surface-dim": "#d8dadc",
+            "primary-fixed-dim": "#adc6ff",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed-dim": "#c2c7cf",
+            "on-secondary-fixed-variant": "#42474e",
+            "surface-container": "#eceef0",
+            background: "#f8f9fb",
+            "on-primary": "#ffffff",
+            "surface-container-highest": "#e0e3e5",
+            "surface-container-high": "#e6e8ea",
+            surface: "#f8f9fb",
+            "primary-fixed": "#d8e2ff",
+            outline: "#727785",
+            "on-tertiary-fixed": "#141c25",
+            "on-surface-variant": "#424753",
+            "secondary-fixed": "#dee3eb",
+            primary: "#004fa8",
+            "on-primary-container": "#e5ebff",
+            "error-container": "#ffdad6",
+            secondary: "#5a5f66",
+            "on-error": "#ffffff",
+            "on-secondary": "#ffffff",
+            "outline-variant": "#c2c6d6",
+            "on-error-container": "#93000a",
+            "on-tertiary": "#ffffff",
+            "on-primary-fixed": "#001a41",
+            "inverse-surface": "#2d3133",
+            "on-secondary-container": "#60656c",
+            "surface-tint": "#005bc0",
+            "on-secondary-fixed": "#171c22",
+            "surface-bright": "#f8f9fb",
+            "inverse-primary": "#adc6ff",
+            tertiary: "#4a535c",
+            "on-surface": "#191c1e",
+            "tertiary-container": "#626b75",
+            "surface-variant": "#e0e3e5",
+            "inverse-on-surface": "#eff1f3",
+            "primary-container": "#0366d6",
+            "surface-container-low": "#f2f4f6",
+            "tertiary-fixed": "#dae3ef",
+            "on-background": "#191c1e",
+            error: "#ba1a1a",
+            "secondary-container": "#dee3eb"
+          },
+          fontFamily: {
+            headline: ["Space Grotesk"],
+            body: ["Inter"],
+            label: ["Inter"]
+          },
+          borderRadius: {
+            DEFAULT: "0.125rem",
+            lg: "0.25rem",
+            xl: "0.5rem",
+            full: "0.75rem"
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body class="bg-surface font-body text-on-surface">
+  <header class="fixed top-0 w-full z-50 border-b border-indigo-100/70">
+    <div class="bg-slate-950 text-white px-3 py-2 sm:h-8 sm:py-0 flex items-center justify-center">
+      <p class="font-semibold text-[11px] sm:text-sm leading-tight text-center max-w-7xl">
+        <span class="hidden sm:inline">📢 </span>Admissions Open for 2026-2027 Batch • Limited Seats!
+        <span class="block sm:inline sm:ml-1">
+          Call:
+          <a class="underline decoration-white/50 hover:decoration-white" href="tel:+918639096679">+91 8639096679</a>
+          <span class="px-1">|</span>
+          <a class="underline decoration-white/50 hover:decoration-white" href="tel:+917569316737">+91 7569316737</a>
+        </span>
+      </p>
+    </div>
+    <nav class="h-auto sm:h-20 bg-white/95 backdrop-blur-sm shadow-sm">
+      <div class="max-w-7xl mx-auto h-full px-3 sm:px-6 flex items-center w-full gap-2 sm:gap-6 py-2 sm:py-0">
+        <a href="/" target="_parent" class="shrink-0">
+          <img src="/logo.png" alt="Trinetra Academy Logo" class="h-10 sm:h-14 w-auto object-contain" />
+        </a>
+
+        <div class="hidden sm:flex flex-1 items-center justify-center gap-14">
+          <a class="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 transition-colors"
+            href="/" target="_parent">Home</a>
+          <a class="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 transition-colors"
+            href="/about" target="_parent">About Us</a>
+          <a class="font-headline font-semibold text-lg tracking-tight text-indigo-600 transition-colors"
+            href="/niat" target="_parent">NIAT</a>
+          <a class="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 transition-colors"
+            href="/courses" target="_parent">Courses</a>
+          <a class="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 transition-colors"
+            href="/contact" target="_parent">Contact</a>
+        </div>
+
+        <div class="flex-1 sm:hidden"></div>
+
+        <button
+          data-open-admission-form
+          class="bg-[#6253f1] text-white px-4 sm:px-10 py-2 sm:py-3 rounded-full font-headline font-semibold text-xs sm:text-lg hover:bg-[#5446df] transition-all flex items-center gap-1 sm:gap-2 shadow-md shadow-indigo-200 whitespace-nowrap shrink-0">
+          Enroll Now
+          <span class="material-symbols-outlined text-base sm:text-lg">arrow_forward</span>
+        </button>
+
+        <button id="mobile-menu-btn" class="sm:hidden p-2 rounded-lg hover:bg-indigo-50 transition-colors shrink-0">
+          <span class="material-symbols-outlined text-2xl text-slate-800">menu</span>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="hidden sm:hidden bg-white border-t border-indigo-100/70 absolute top-full left-0 right-0 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-3">
+          <a class="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 hover:bg-indigo-50 px-4 py-2 rounded-lg transition-colors"
+            href="/" target="_parent">Home</a>
+          <a class="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 hover:bg-indigo-50 px-4 py-2 rounded-lg transition-colors"
+            href="/about" target="_parent">About Us</a>
+          <a class="font-headline font-semibold text-lg tracking-tight text-indigo-600 bg-indigo-50 px-4 py-2 rounded-lg transition-colors"
+            href="/niat" target="_parent">NIAT</a>
+          <a class="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 hover:bg-indigo-50 px-4 py-2 rounded-lg transition-colors"
+            href="/courses" target="_parent">Courses</a>
+          <a class="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 hover:bg-indigo-50 px-4 py-2 rounded-lg transition-colors"
+            href="/contact" target="_parent">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="pt-32 min-h-[70vh] bg-surface">
+    <section class="bg-[#084b96] text-white py-14 sm:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <p class="inline-flex items-center rounded-full bg-white/10 border border-white/20 px-4 py-1 text-xs sm:text-sm font-headline font-bold tracking-[0.2em] uppercase">NIAT Overview</p>
+        <h1 class="mt-5 text-3xl sm:text-5xl font-headline font-extrabold tracking-tight leading-tight">Trinetra AI College: Future-Ready Education During Intermediate</h1>
+        <p class="mt-5 text-sm sm:text-lg text-blue-100 max-w-4xl leading-relaxed">
+          Students who want job-ready skills early can choose Trinetra AI College, where Intermediate with MPC or BiPC is integrated with AI learning alongside focused preparation for EAMCET, IIT-JEE, and NEET. In an increasingly competitive world, percentages and ranks alone are not enough without practical skills. Trinetra equips students to become future-ready.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 sm:py-16 bg-surface">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-6 sm:gap-8">
+          <article class="bg-surface-container-lowest border border-outline-variant rounded-2xl p-5 sm:p-8 shadow-sm">
+            <h2 class="font-headline text-2xl sm:text-3xl font-bold text-on-surface mb-4">Do You Know What NIAT Is?</h2>
+            <p class="text-secondary text-sm sm:text-base leading-relaxed mb-4">
+              NIAT is not a single centrally governed body like IIT or NIT. In practice, NIAT is commonly used as a name or acronym by private or autonomous institutions that focus on advanced, industry-oriented education.
+            </p>
+            <h3 class="font-headline text-xl font-bold text-on-surface mb-3">What NIAT Typically Stands For</h3>
+            <p class="text-secondary text-sm sm:text-base leading-relaxed mb-4">Depending on the institution, NIAT usually represents National Institute of Advanced Technology, Training, Analytics, or Artificial Intelligence.</p>
+            <ul class="space-y-2 text-sm sm:text-base text-on-surface-variant">
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Artificial Intelligence (AI)</li>
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Data Science</li>
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Machine Learning</li>
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Robotics</li>
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Software Development</li>
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Industry-integrated programs</li>
+            </ul>
+          </article>
+
+          <article class="bg-primary-container/20 border border-primary/25 rounded-2xl p-5 sm:p-8">
+            <h2 class="font-headline text-2xl sm:text-3xl font-bold text-on-surface mb-4">Who Should Consider NIAT-Type Programs?</h2>
+            <ul class="space-y-3 text-sm sm:text-base text-on-surface-variant leading-relaxed mb-6">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary mt-0.5 text-base">arrow_right</span>Intermediate students from MPC and BiPC streams</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary mt-0.5 text-base">arrow_right</span>Engineering and medical entrance aspirants seeking practical exposure</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary mt-0.5 text-base">arrow_right</span>Students interested in AI and technology-driven careers</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary mt-0.5 text-base">arrow_right</span>Learners who want early job-readiness through projects and coding</li>
+            </ul>
+
+            <div class="rounded-xl bg-white border border-outline-variant p-4 sm:p-5">
+              <h3 class="font-headline text-lg sm:text-xl font-bold text-on-surface mb-2">Important Clarification</h3>
+              <p class="text-secondary text-sm sm:text-base leading-relaxed">NIAT institutions are generally private and autonomous skill-focused organizations. They are not government institutions like IITs, NITs, or AICTE-regulated national systems.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-12 sm:pb-16 bg-surface">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <article class="rounded-2xl bg-surface-container-lowest border border-outline-variant p-5 sm:p-8 shadow-sm">
+          <h2 class="font-headline text-2xl sm:text-3xl font-bold text-on-surface mb-6">Key Features of NIAT-Type Institutions</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+            <div class="rounded-xl bg-surface-container-low p-4 sm:p-5">
+              <h3 class="font-headline text-lg font-bold text-on-surface mb-2">1. Industry-Oriented Curriculum</h3>
+              <ul class="space-y-1.5 text-sm text-on-surface-variant">
+                <li>• Practical skills beyond theory</li>
+                <li>• Project-based learning</li>
+                <li>• Real-world problem solving</li>
+              </ul>
+            </div>
+            <div class="rounded-xl bg-surface-container-low p-4 sm:p-5">
+              <h3 class="font-headline text-lg font-bold text-on-surface mb-2">2. AI and Emerging Technologies</h3>
+              <ul class="space-y-1.5 text-sm text-on-surface-variant">
+                <li>• Courses aligned with current technology trends</li>
+                <li>• Strong focus on AI and data skills expected by industry</li>
+              </ul>
+            </div>
+            <div class="rounded-xl bg-surface-container-low p-4 sm:p-5">
+              <h3 class="font-headline text-lg font-bold text-on-surface mb-2">3. Flexible Programs</h3>
+              <ul class="space-y-1.5 text-sm text-on-surface-variant">
+                <li>• Short-term certifications</li>
+                <li>• Diploma pathways</li>
+                <li>• Integrated courses with Intermediate or Degree</li>
+              </ul>
+            </div>
+            <div class="rounded-xl bg-surface-container-low p-4 sm:p-5">
+              <h3 class="font-headline text-lg font-bold text-on-surface mb-2">4. Placement and Career Support</h3>
+              <ul class="space-y-1.5 text-sm text-on-surface-variant">
+                <li>• Industry tie-ups and internship opportunities</li>
+                <li>• Skill-based hiring preparation</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-7 rounded-2xl bg-gradient-to-r from-primary to-[#0366d6] p-5 sm:p-7 text-white">
+            <h3 class="font-headline text-xl sm:text-2xl font-bold mb-2">Why Trinetra Stands Out</h3>
+            <p class="text-sm sm:text-base text-blue-50 leading-relaxed">
+              Trinetra develops students to be future-ready and career-confident immediately after Intermediate, with strong foundations in competitive exams plus practical AI-oriented skills. This gives students an early advantage for internships, campus opportunities, and long-term employability.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="w-full border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 py-12">
+    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-start gap-12">
+      <div class="max-w-sm">
+        <div class="mb-4">
+          <img src="/logo.png" alt="Trinetra Academy Logo" class="h-14 w-auto object-contain" />
+        </div>
+        <p class="font-['Inter'] text-sm leading-relaxed text-slate-500 dark:text-slate-400">
+          Empowering the next generation of scholars with cutting-edge pedagogy and personalized mentorship.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+        <div>
+          <h4 class="font-headline font-bold text-sm text-on-surface mb-4">Programs</h4>
+          <ul class="space-y-2">
+            <li><a class="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" href="#">NEET Prep + AI</a></li>
+            <li><a class="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" href="#">JEE Main + AI</a></li>
+            <li><a class="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" href="#">JEE Advanced + AI</a></li>
+            <li><a class="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" href="#">EAMCET + AI</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-headline font-bold text-sm text-on-surface mb-4">Support</h4>
+          <ul class="space-y-2">
+            <li><a class="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" href="#">Contact Support</a></li>
+            <li><a class="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-span-2 md:col-span-1">
+          <h4 class="font-headline font-bold text-sm text-on-surface mb-4">Connect</h4>
+          <div class="flex gap-4">
+            <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all cursor-pointer">
+              <span class="material-symbols-outlined text-xl">share</span>
+            </div>
+            <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all cursor-pointer">
+              <span class="material-symbols-outlined text-xl">alternate_email</span>
+            </div>
+            <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all cursor-pointer">
+              <span class="material-symbols-outlined text-xl">call</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-8 pt-12 mt-12 border-t border-slate-200/50 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="font-['Inter'] text-sm text-slate-500">&copy; 2026 Trinetra Academy. Empowering the next generation of scholars.</p>
+      <div class="flex gap-6">
+        <a class="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" href="#">Terms of Service</a>
+        <a class="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="admission-form-modal" class="hidden fixed inset-0 z-[200] bg-slate-950/55 backdrop-blur-[2px] p-4 flex items-center justify-center">
+    <div class="w-full max-w-xl rounded-2xl bg-white border border-slate-200 shadow-2xl p-6 sm:p-8 relative" role="dialog" aria-modal="true" aria-label="Admission Enquiry Form">
+      <button id="admission-form-close" class="absolute top-4 right-4 w-9 h-9 rounded-full border border-slate-200 text-slate-600 hover:bg-slate-100 transition-colors" type="button" aria-label="Close form">x</button>
+      <h3 class="text-2xl sm:text-3xl font-headline font-extrabold text-slate-900 tracking-tight">Admission Enquiry</h3>
+      <p class="text-slate-500 mt-1 text-sm sm:text-base mb-6">Share your details and our team will contact you shortly.</p>
+
+      <form id="admission-form" class="space-y-4">
+        <input type="hidden" name="subject" value="New Admission Enquiry - Trinetra" />
+        <input type="hidden" name="from_name" value="Trinetra Website" />
+        <input type="hidden" name="source" value="niat-iframe" />
+
+        <div>
+          <label class="block text-sm font-semibold text-slate-700 mb-1" for="admission-name">Name</label>
+          <input id="admission-name" class="w-full rounded-xl border-slate-300 focus:border-blue-600 focus:ring-blue-600" type="text" name="name" required placeholder="Your full name" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold text-slate-700 mb-1" for="admission-email">Email</label>
+          <input id="admission-email" class="w-full rounded-xl border-slate-300 focus:border-blue-600 focus:ring-blue-600" type="email" name="email" required placeholder="you@example.com" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold text-slate-700 mb-1" for="admission-message">Message</label>
+          <textarea id="admission-message" class="w-full rounded-xl border-slate-300 focus:border-blue-600 focus:ring-blue-600" name="message" rows="4" required placeholder="Tell us your preferred course and timing"></textarea>
+        </div>
+
+        <button id="admission-submit" type="submit" class="w-full rounded-xl bg-blue-700 text-white py-3.5 font-headline font-bold hover:bg-blue-800 transition-colors">Submit Form</button>
+        <p id="admission-form-status" class="text-sm text-slate-600 min-h-[20px]"></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const WEB3FORMS_ACCESS_KEY = "521931db-a5d7-4b9d-9f38-8517213e29fe";
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const modal = document.getElementById("admission-form-modal");
+      const closeBtn = document.getElementById("admission-form-close");
+      const form = document.getElementById("admission-form");
+      const status = document.getElementById("admission-form-status");
+      const submitBtn = document.getElementById("admission-submit");
+      const triggers = document.querySelectorAll("[data-open-admission-form]");
+
+      mobileMenuBtn.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      const menuLinks = mobileMenu.querySelectorAll("a");
+      menuLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+
+      const openModal = () => {
+        modal.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+      };
+
+      const closeModal = () => {
+        modal.classList.add("hidden");
+        document.body.style.overflow = "";
+      };
+
+      triggers.forEach((trigger) => {
+        trigger.addEventListener("click", function (event) {
+          event.preventDefault();
+          openModal();
+        });
+      });
+
+      closeBtn.addEventListener("click", closeModal);
+
+      modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+          closeModal();
+        }
+      });
+
+      window.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && !modal.classList.contains("hidden")) {
+          closeModal();
+        }
+      });
+
+      form.addEventListener("submit", async function (event) {
+        event.preventDefault();
+        status.textContent = "Sending...";
+        submitBtn.disabled = true;
+        submitBtn.classList.add("opacity-70", "cursor-not-allowed");
+
+        const formData = new FormData(form);
+        formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+
+        try {
+          const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+          });
+          const data = await response.json();
+
+          if (data.success) {
+            status.textContent = "Form submitted successfully.";
+            form.reset();
+          } else {
+            status.textContent = "Submission failed. Please try again.";
+          }
+        } catch (error) {
+          status.textContent = "Network error. Please try again.";
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.classList.remove("opacity-70", "cursor-not-allowed");
+        }
+      });
+    })();
+  </script>
+
+</body>
+
+</html>

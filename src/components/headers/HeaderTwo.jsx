@@ -24,13 +24,13 @@ export const HeaderTwo = () => {
                 <li>
                   <img src={callIcon} alt="" />
                   <span>
-                    Call: <a href="tel:9848137364">9848137364</a> / <a href="tel:6306466692">6306466692</a>
+                    Call: <a href="tel:+918639096679">+91 8639096679</a> / <a href="tel:+917569316737">+91 7569316737</a>
                   </span>
                 </li>
                 <li>
                   <img src={callIcon} alt="" />
                   <span>
-                    Phone: <a href="tel:+918833500136">+91 8833500136</a>
+                    Phone: <a href="tel:+918639096679">+91 8639096679</a>
                   </span>
                 </li>
               </ul>

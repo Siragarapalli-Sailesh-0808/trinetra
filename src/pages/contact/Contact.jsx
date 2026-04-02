@@ -51,6 +51,7 @@ export const Contact = () => {
             <div className="hidden sm:flex flex-1 items-center justify-center gap-14">
               <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary transition-colors" to="/">Home</Link>
               <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary transition-colors" to="/about">About Us</Link>
+              <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary transition-colors" to="/niat">NIAT</Link>
               <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary transition-colors" to="/courses">Courses</Link>
               <Link className="font-headline font-semibold text-lg tracking-tight text-primary transition-colors border-b-2 border-primary" to="/contact">Contact</Link>
             </div>
@@ -80,6 +81,7 @@ export const Contact = () => {
               <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-3">
                 <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary hover:bg-blue-50 px-4 py-2 rounded-lg transition-colors" to="/">Home</Link>
                 <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary hover:bg-blue-50 px-4 py-2 rounded-lg transition-colors" to="/about">About Us</Link>
+                <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary hover:bg-blue-50 px-4 py-2 rounded-lg transition-colors" to="/niat">NIAT</Link>
                 <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary hover:bg-blue-50 px-4 py-2 rounded-lg transition-colors" to="/courses">Courses</Link>
                 <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-primary bg-blue-50 px-4 py-2 rounded-lg transition-colors" to="/contact">Contact</Link>
               </div>
@@ -174,8 +176,7 @@ export const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-headline font-bold text-xl text-slate-800 mb-2">Office Hours</h4>
-                    <p className="text-slate-600 font-medium">Monday - Saturday:<span className="text-slate-800 font-bold ml-2">9:00 AM - 6:00 PM</span></p>
-                    <p className="text-slate-500 text-sm mt-1">Sunday: Closed</p>
+                    <p className="text-slate-600 font-medium">Monday - Saturday:<span className="text-slate-800 font-bold ml-2">9:00 AM - 5:00 PM</span></p>
                   </div>
                 </div>
               </div>
@@ -218,17 +219,16 @@ export const Contact = () => {
             <div>
               <h4 className="font-headline font-bold text-lg text-white mb-6">Programs</h4>
               <ul className="space-y-4">
-                <li><Link className="font-body text-sm text-slate-400 hover:text-white transition-colors" to="#">NEET Prep</Link></li>
-                <li><Link className="font-body text-sm text-slate-400 hover:text-white transition-colors" to="#">JEE Main</Link></li>
-                <li><Link className="font-body text-sm text-slate-400 hover:text-white transition-colors" to="#">JEE Advanced</Link></li>
-                <li><Link className="font-body text-sm text-slate-400 hover:text-white transition-colors" to="#">EAMCET</Link></li>
+                <li><Link className="font-body text-sm text-slate-400 hover:text-white transition-colors" to="#">NEET Prep + AI</Link></li>
+                <li><Link className="font-body text-sm text-slate-400 hover:text-white transition-colors" to="#">JEE Main + AI</Link></li>
+                <li><Link className="font-body text-sm text-slate-400 hover:text-white transition-colors" to="#">JEE Advanced + AI</Link></li>
+                <li><Link className="font-body text-sm text-slate-400 hover:text-white transition-colors" to="#">EAMCET + AI</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="font-headline font-bold text-lg text-white mb-6">Support</h4>
               <ul className="space-y-4">
                 <li><Link className="font-body text-sm text-slate-400 hover:text-white transition-colors" to="/contact">Contact Support</Link></li>
-                <li><Link className="font-body text-sm text-slate-400 hover:text-white transition-colors" to="#">Global Centers</Link></li>
                 <li><Link className="font-body text-sm text-slate-400 hover:text-white transition-colors" to="#">Privacy Policy</Link></li>
               </ul>
             </div>
@@ -250,7 +250,7 @@ export const Contact = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 pt-12 mt-12 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="font-body text-sm text-slate-500">&copy; 2024 Trinetra Academy. Empowering the next generation of scholars.</p>
+          <p className="font-body text-sm text-slate-500">&copy; 2026 Trinetra Academy. Empowering the next generation of scholars.</p>
           <div className="flex gap-8">
             <Link className="font-body text-sm text-slate-500 hover:text-white transition-colors" to="#">Terms of Service</Link>
             <Link className="font-body text-sm text-slate-500 hover:text-white transition-colors" to="#">Privacy Policy</Link>

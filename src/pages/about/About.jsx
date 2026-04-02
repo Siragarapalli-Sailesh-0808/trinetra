@@ -53,6 +53,7 @@ export const About = () => {
             <div className="hidden sm:flex flex-1 items-center justify-center gap-14">
               <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 transition-colors" to="/">Home</Link>
               <Link className="font-headline font-semibold text-lg tracking-tight text-indigo-600 transition-colors border-b-2 border-indigo-600" to="/about">About Us</Link>
+              <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 transition-colors" to="/niat">NIAT</Link>
               <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 transition-colors" to="/courses">Courses</Link>
               <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 transition-colors" to="/contact">Contact</Link>
             </div>
@@ -82,6 +83,7 @@ export const About = () => {
               <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-3">
                 <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 hover:bg-indigo-50 px-4 py-2 rounded-lg transition-colors" to="/">Home</Link>
                 <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-indigo-600 bg-indigo-50 px-4 py-2 rounded-lg transition-colors" to="/about">About Us</Link>
+                <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 hover:bg-indigo-50 px-4 py-2 rounded-lg transition-colors" to="/niat">NIAT</Link>
                 <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 hover:bg-indigo-50 px-4 py-2 rounded-lg transition-colors" to="/courses">Courses</Link>
                 <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-indigo-600 hover:bg-indigo-50 px-4 py-2 rounded-lg transition-colors" to="/contact">Contact</Link>
               </div>
@@ -143,7 +145,7 @@ export const About = () => {
                   </div>
                   <div>
                     <h4 className="text-2xl font-headline font-bold mb-3 text-white tracking-tight">Campus Life</h4>
-                    <p className="text-white/70 text-sm leading-relaxed">A vibrant community of thinkers and doers from 40+ nations worldwide.</p>
+                    <p className="text-white/70 text-sm leading-relaxed">A vibrant community of thinkers and doers.</p>
                   </div>
                 </div>
                 <div className="absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-4 group-hover:translate-x-0">
@@ -156,11 +158,11 @@ export const About = () => {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-2xl -mr-10 -mt-10 transition-all duration-700 group-hover:bg-white/20 group-hover:scale-150"></div>
                 <div className="relative z-10 flex flex-col h-full justify-between min-h-[280px]">
                   <div className="w-16 h-16 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-xl">
-                    <span className="material-symbols-outlined text-white text-3xl font-light">history_edu</span>
+                    <span className="material-symbols-outlined text-white text-3xl font-light">memory</span>
                   </div>
                   <div>
-                    <h4 className="text-2xl font-headline font-bold mb-3 text-white tracking-tight">Arts &amp; Culture</h4>
-                    <p className="text-white/70 text-sm leading-relaxed">Expressing boundless creativity through traditional fine arts and digital media.</p>
+                    <h4 className="text-2xl font-headline font-bold mb-3 text-white tracking-tight">AI Labs &amp; Hands-on Experience</h4>
+                    <p className="text-white/70 text-sm leading-relaxed">AI-focused digital learning with hands-on experience in advanced AI labs.</p>
                   </div>
                 </div>
                 <div className="absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-4 group-hover:translate-x-0">
@@ -177,7 +179,7 @@ export const About = () => {
                   </div>
                   <div>
                     <h4 className="text-2xl font-headline font-bold mb-3 text-white tracking-tight">Wellness</h4>
-                    <p className="text-white/70 text-sm leading-relaxed">Mindful, dedicated spaces for recovery, reflection, and holistic mental health.</p>
+                    <p className="text-white/70 text-sm leading-relaxed">Stress-free education aimed at student wellness, with a focus on both physical and mental well-being.</p>
                   </div>
                 </div>
                 <div className="absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-4 group-hover:translate-x-0">
@@ -194,7 +196,7 @@ export const About = () => {
                   </div>
                   <div>
                     <h4 className="text-2xl font-headline font-bold mb-3 text-white tracking-tight">Sports</h4>
-                    <p className="text-white/70 text-sm leading-relaxed">High-performance training complexes and intensely competitive collegiate leagues.</p>
+                    <p className="text-white/70 text-sm leading-relaxed">Students are encouraged in all ways for the harmonious development of personality.</p>
                   </div>
                 </div>
                 <div className="absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-4 group-hover:translate-x-0">
@@ -215,7 +217,7 @@ export const About = () => {
                   <span className="text-primary font-headline font-bold text-sm uppercase tracking-widest">AI Insight</span>
                 </div>
                 <h3 className="text-2xl md:text-4xl font-headline font-bold text-on-surface mb-4 leading-tight">Predictive Learning Journeys</h3>
-                <p className="text-on-surface-variant max-w-xl">Our proprietary AI engine maps your career trajectory from day one, suggesting modules and industry connections that match your unique cognitive profile.</p>
+                <p className="text-on-surface-variant max-w-xl">Our proprietary AI engine maps a student's career trajectory from day one, suggesting modules and industry connections that match each learner's unique cognitive profile.</p>
               </div>
               <div className="relative w-full md:w-auto">
                 <button
@@ -252,17 +254,16 @@ export const About = () => {
             <div>
               <h4 className="font-headline font-bold text-sm text-on-surface mb-4">Programs</h4>
               <ul className="space-y-2">
-                <li><Link className="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" to="#">NEET Prep</Link></li>
-                <li><Link className="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" to="#">JEE Main</Link></li>
-                <li><Link className="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" to="#">JEE Advanced</Link></li>
-                <li><Link className="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" to="#">EAMCET</Link></li>
+                <li><Link className="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" to="#">NEET Prep + AI</Link></li>
+                <li><Link className="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" to="#">JEE Main + AI</Link></li>
+                <li><Link className="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" to="#">JEE Advanced + AI</Link></li>
+                <li><Link className="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" to="#">EAMCET + AI</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="font-headline font-bold text-sm text-on-surface mb-4">Support</h4>
               <ul className="space-y-2">
                 <li><Link className="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" to="/contact">Contact Support</Link></li>
-                <li><Link className="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" to="#">Global Centers</Link></li>
                 <li><Link className="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" to="#">Privacy Policy</Link></li>
               </ul>
             </div>
@@ -284,7 +285,7 @@ export const About = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-8 pt-12 mt-12 border-t border-slate-200/50 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="font-['Inter'] text-sm text-slate-500">&copy; 2024 Trinetra Academy. Empowering the next generation of scholars.</p>
+          <p className="font-['Inter'] text-sm text-slate-500">&copy; 2026 Trinetra Academy. Empowering the next generation of scholars.</p>
           <div className="flex gap-6">
             <Link className="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" to="#">Terms of Service</Link>
             <Link className="font-['Inter'] text-sm text-slate-500 hover:text-blue-700 transition-colors" to="#">Privacy Policy</Link>

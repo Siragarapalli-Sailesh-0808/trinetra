@@ -7,6 +7,7 @@ import { CoursesGridView } from "./pages/course/CoursesGridView";
 import { About } from "./pages/about/About";
 import { Error } from "./pages/error/Error";
 import { Contact } from "./pages/contact/Contact";
+import { Niat } from "./pages/niat/Niat";
 
 function App() {
   useWow();
@@ -21,6 +22,7 @@ function App() {
       <Route path="/about" element={<About />} />
       <Route path="/courses" element={<CoursesGridView />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/niat" element={<Niat />} />
       <Route path="*" element={<Error />} />
     </Routes>
   );

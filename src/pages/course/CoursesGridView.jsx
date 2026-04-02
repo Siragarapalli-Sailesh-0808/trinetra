@@ -15,7 +15,7 @@ const coursesList = [
     seats: 30,
     timing: "7:00 PM - 9:00 PM",
     category: "Intermediate",
-    title: "MPC + AI",
+    title: "MPC / BiPC + AI",
     description: "Practical, real-world learning with MPC + AI integration. Learn coding, AI fundamentals, and logical thinking. Career scope: Engineering + AI, Data Science, IT. Competition: Medium. Career growth: Very high. Salary potential: ₹10–90 LPA+. Future demand: Extraordinary. Skills focus: Technology + practical skills.",
     subjects: "Math, Physics, Chemistry, AI Fundamentals",
     competition: "Medium",
@@ -33,7 +33,7 @@ const coursesList = [
     seats: 25,
     timing: "6:30 PM - 8:30 PM",
     category: "Foundation",
-    title: "MPC + IIT",
+    title: "MPC + IIT / BiPC + NEET with AI",
     description: "Advanced preparation for IIT entrance exams with rigorous mathematical modeling and physics problem-solving. Led by IIT graduates and expert faculty. Competition: Very high. Career growth: Very high. Salary potential: ₹10–50 LPA+. Future demand: Excellent. Skills focus: Advanced problem-solving and conceptual mastery.",
     subjects: "Physics, Chemistry, Mathematics",
     competition: "Very high",
@@ -51,7 +51,7 @@ const coursesList = [
     seats: 40,
     timing: "9:30 AM - 5:30 PM",
     category: "Long-Term",
-    title: "MPC + EAMCET",
+    title: "MPC + EAMCET / BiPC + NEET + AI",
     description: "State-centric approach focused on high-speed calculation techniques and high-weightage topic mastery for EAMCET engineering entrance. Competition: Medium. Career growth: Moderate. Salary potential: ₹3–10 LPA. Future demand: Excellent. Skills focus: Engineering and analytical skills.",
     subjects: "Physics, Chemistry, Mathematics",
     competition: "Medium",
@@ -82,7 +82,7 @@ const coursesList = [
     seats: 20,
     timing: "6:30 PM - 8:30 PM",
     category: "Foundation",
-    title: "IIT Foundation Classes",
+    title: "BIPC-NEET Classes",
     description: "Early preparation for IIT-JEE for students in 8th, 9th, and 10th classes. Build strong fundamentals for future success.",
     subjects: "Mathematics, Physics, Chemistry",
     rating: 4.6,
@@ -153,6 +153,7 @@ export const CoursesGridView = () => {
             <div className="hidden sm:flex flex-1 items-center justify-center gap-14">
               <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary transition-colors" to="/">Home</Link>
               <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary transition-colors" to="/about">About Us</Link>
+              <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary transition-colors" to="/niat">NIAT</Link>
               <Link className="font-headline font-semibold text-lg tracking-tight text-primary transition-colors border-b-2 border-primary" to="/courses">Courses</Link>
               <Link className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary transition-colors" to="/contact">Contact</Link>
             </div>
@@ -182,6 +183,7 @@ export const CoursesGridView = () => {
               <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-3">
                 <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary hover:bg-blue-50 px-4 py-2 rounded-lg transition-colors" to="/">Home</Link>
                 <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary hover:bg-blue-50 px-4 py-2 rounded-lg transition-colors" to="/about">About Us</Link>
+                <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary hover:bg-blue-50 px-4 py-2 rounded-lg transition-colors" to="/niat">NIAT</Link>
                 <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-primary bg-blue-50 px-4 py-2 rounded-lg transition-colors" to="/courses">Courses</Link>
                 <Link onClick={() => setIsMobileMenuOpen(false)} className="font-headline font-semibold text-lg tracking-tight text-slate-800 hover:text-primary hover:bg-blue-50 px-4 py-2 rounded-lg transition-colors" to="/contact">Contact</Link>
               </div>
@@ -315,17 +317,16 @@ export const CoursesGridView = () => {
             <div>
               <h4 className="font-headline font-bold text-sm sm:text-lg text-white mb-4 sm:mb-6">Programs</h4>
               <ul className="space-y-2 sm:space-y-4">
-                <li><Link className="font-body text-xs sm:text-sm text-slate-400 hover:text-white transition-colors" to="#">NEET Prep</Link></li>
-                <li><Link className="font-body text-xs sm:text-sm text-slate-400 hover:text-white transition-colors" to="#">JEE Main</Link></li>
-                <li><Link className="font-body text-xs sm:text-sm text-slate-400 hover:text-white transition-colors" to="#">JEE Advanced</Link></li>
-                <li><Link className="font-body text-xs sm:text-sm text-slate-400 hover:text-white transition-colors" to="#">EAMCET</Link></li>
+                <li><Link className="font-body text-xs sm:text-sm text-slate-400 hover:text-white transition-colors" to="#">NEET Prep + AI</Link></li>
+                <li><Link className="font-body text-xs sm:text-sm text-slate-400 hover:text-white transition-colors" to="#">JEE Main + AI</Link></li>
+                <li><Link className="font-body text-xs sm:text-sm text-slate-400 hover:text-white transition-colors" to="#">JEE Advanced + AI</Link></li>
+                <li><Link className="font-body text-xs sm:text-sm text-slate-400 hover:text-white transition-colors" to="#">EAMCET + AI</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="font-headline font-bold text-sm sm:text-lg text-white mb-4 sm:mb-6">Support</h4>
               <ul className="space-y-2 sm:space-y-4">
                 <li><Link className="font-body text-xs sm:text-sm text-slate-400 hover:text-white transition-colors" to="/contact">Contact Support</Link></li>
-                <li><Link className="font-body text-xs sm:text-sm text-slate-400 hover:text-white transition-colors" to="#">Global Centers</Link></li>
                 <li><Link className="font-body text-xs sm:text-sm text-slate-400 hover:text-white transition-colors" to="#">Privacy Policy</Link></li>
               </ul>
             </div>
@@ -347,7 +348,7 @@ export const CoursesGridView = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 pt-8 sm:pt-12 mt-8 sm:mt-12 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6">
-          <p className="font-body text-xs sm:text-sm text-slate-500 text-center md:text-left">&copy; 2024 Trinetra Academy. Empowering the next generation of scholars.</p>
+          <p className="font-body text-xs sm:text-sm text-slate-500 text-center md:text-left">&copy; 2026 Trinetra Academy. Empowering the next generation of scholars.</p>
           <div className="flex gap-4 sm:gap-8">
             <Link className="font-body text-xs sm:text-sm text-slate-500 hover:text-white transition-colors" to="#">Terms of Service</Link>
             <Link className="font-body text-xs sm:text-sm text-slate-500 hover:text-white transition-colors" to="#">Privacy Policy</Link>
